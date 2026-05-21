@@ -342,7 +342,8 @@
       position: relative;
       height: 100svh;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: stretch;
       padding: 0;
       overflow: hidden;
     }
@@ -375,10 +376,16 @@
     .hero-inner {
       position: relative;
       z-index: 1;
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       max-width: var(--mw);
-      margin: 0 auto;
-      padding: 9rem 1.5rem 9rem;
       width: 100%;
+      margin: 0 auto;
+      padding: 9rem 1.5rem 3rem;
     }
 
     .hero-eyebrow {
@@ -432,10 +439,9 @@
 
     /* Scroll indicator */
     .scroll-hint {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
+      position: relative;
+      align-self: center;
+      margin-bottom: 2.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1739,7 +1745,7 @@
       </p>
 
       <div class="hero-ctas fu d4">
-        <a href="#contact" class="btn btn-leaf">Talk to Our Team</a>
+        <a href="contact.html" class="btn btn-leaf">Talk to Our Team</a>
         <a href="#case-study" class="btn btn-ghost">See Our Work</a>
       </div>
 
@@ -1922,7 +1928,7 @@
           <li>Salesforce Implementation Ready Partner designation</li>
           <li>Tallahassee-based — in the room when it matters</li>
         </ul>
-        <a href="#contact" class="arrow-link arrow-link--sage">Start a conversation</a>
+        <a href="contact.html" class="arrow-link arrow-link--sage">Start a conversation</a>
       </article>
 
     </div>
@@ -1968,7 +1974,7 @@
         <p class="svc-outcome">
           "End-to-end on Salesforce: intake, eligibility, disbursement, reporting, and reconciliation — built to meet federal audit requirements."
         </p>
-        <a href="#contact" class="arrow-link arrow-link--leaf">Learn more</a>
+        <a href="contact.html" class="arrow-link arrow-link--leaf">Learn more</a>
       </article>
 
       <article class="svc-card">
@@ -1983,7 +1989,7 @@
         <p class="svc-outcome">
           "Budget-to-actuals visibility, legislative reporting, and audit-ready financials for agencies and foundations that cannot afford surprises."
         </p>
-        <a href="#contact" class="arrow-link arrow-link--leaf">Learn more</a>
+        <a href="contact.html" class="arrow-link arrow-link--leaf">Learn more</a>
       </article>
 
       <article class="svc-card">
@@ -1996,7 +2002,7 @@
         <p class="svc-outcome">
           "Technology strategy grounded in budget realities, procurement law, and the political calendar — not vendor roadmaps."
         </p>
-        <a href="#contact" class="arrow-link arrow-link--leaf">Learn more</a>
+        <a href="contact.html" class="arrow-link arrow-link--leaf">Learn more</a>
       </article>
 
       <article class="svc-card">
@@ -2013,7 +2019,7 @@
         <p class="svc-outcome">
           "Implementation discipline for organizations where missed deadlines have legislative consequences and change requires briefings up the chain."
         </p>
-        <a href="#contact" class="arrow-link arrow-link--leaf">Learn more</a>
+        <a href="contact.html" class="arrow-link arrow-link--leaf">Learn more</a>
       </article>
 
     </div>
@@ -2039,7 +2045,7 @@
             <li>Finance and administration offices</li>
             <li>Departments navigating federal compliance mandates</li>
           </ul>
-          <a href="#contact" class="arrow-link arrow-link--leaf">Work with us</a>
+          <a href="contact.html" class="arrow-link arrow-link--leaf">Work with us</a>
         </div>
       </div>
 
@@ -2054,7 +2060,7 @@
             <li>Donor management and constituent relationship systems</li>
             <li>Federally funded programs requiring audit-ready documentation</li>
           </ul>
-          <a href="#contact" class="arrow-link arrow-link--leaf">Work with us</a>
+          <a href="contact.html" class="arrow-link arrow-link--leaf">Work with us</a>
         </div>
       </div>
 
@@ -2092,7 +2098,7 @@
           </div>
         </div>
 
-        <a href="#contact" class="arrow-link arrow-link--leaf">Request the full case study</a>
+        <a href="contact.html" class="arrow-link arrow-link--leaf">Request the full case study</a>
       </div>
 
       <div class="cs-right fu d2">
@@ -2138,7 +2144,7 @@
         <span class="eyebrow">Case Studies</span>
         <h2 id="csg-heading" class="fu">Work that delivered.</h2>
       </div>
-      <a href="#contact" class="btn btn-dark-outline fu d1">Request a Case Study</a>
+      <a href="contact.html" class="btn btn-dark-outline fu d1">Request a Case Study</a>
     </div>
 
     <div class="cs-card fu d1 wrap">
@@ -2153,7 +2159,7 @@
         <p>
           Following the successful contract award, CCOC engaged Canopy to provide ongoing project management advisory and oversight — keeping the implementation on track, applying best practices, and ensuring the final solution met CCOC's statewide service objectives.
         </p>
-        <a href="#contact" class="arrow-link arrow-link--sage">Request the full case study</a>
+        <a href="contact.html" class="arrow-link arrow-link--sage">Request the full case study</a>
       </div>
 
       <div class="cs-card-right">
@@ -2357,7 +2363,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="#leadership">Leadership</a></li>
           <li><a href="#case-study">Case Studies</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
 
