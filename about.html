@@ -361,10 +361,11 @@
     .origin-stat-stack {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 0.75rem;
     }
 
     .origin-stat {
+      border-radius: 8px;
       background: var(--bone);
       padding: 1.75rem 2rem;
       display: flex;
@@ -438,11 +439,12 @@
     .commerce-roles {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
+      gap: 1rem;
       margin-bottom: 3rem;
     }
 
     .commerce-role {
+      border-radius: 8px;
       background: rgba(219,211,201,0.04);
       border: 1px solid rgba(219,211,201,0.08);
       padding: 2rem 1.75rem;
@@ -506,7 +508,7 @@
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 1rem;
     }
 
     .profile-card {
@@ -515,6 +517,7 @@
       grid-template-columns: 280px 1fr;
       gap: 0;
       overflow: hidden;
+      border-radius: 8px;
       transition: background 0.2s;
     }
     .profile-card:hover { background: var(--white); }

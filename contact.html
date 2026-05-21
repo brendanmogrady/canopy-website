@@ -396,15 +396,17 @@
 
     .contact-card {
       background: var(--midnight);
-      padding: 2.25rem;
-      margin-bottom: 2px;
+      padding: 2.5rem;
+      margin-bottom: 1rem;
       position: relative;
+      border-radius: 8px;
+      overflow: hidden;
     }
     .contact-card::before {
       content: '';
       position: absolute;
       top: 0; left: 0;
-      width: 3px; height: 100%;
+      width: 4px; height: 100%;
       background: var(--leaf);
     }
 
@@ -465,7 +467,8 @@
 
     .contact-card-proc {
       background: var(--bone);
-      padding: 2rem 2.25rem;
+      padding: 2.5rem;
+      border-radius: 8px;
     }
 
     .contact-card-proc .proc-label {
@@ -528,19 +531,21 @@
     .expect-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 2px;
+      gap: 1.25rem;
     }
 
     .expect-card {
       background: var(--offwhite);
-      padding: 2rem 1.75rem;
+      padding: 2.25rem 2rem;
       position: relative;
+      border-radius: 8px;
+      overflow: hidden;
     }
     .expect-card::before {
       content: '';
       position: absolute;
       top: 0; left: 0;
-      width: 3px; height: 100%;
+      width: 4px; height: 100%;
       background: var(--sage);
     }
 

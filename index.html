@@ -756,13 +756,15 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
+      gap: 1rem;
     }
 
     .diff-card {
       background: var(--bone);
       padding: 2.75rem 2.25rem;
       position: relative;
+      border-radius: 8px;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
     }
@@ -1280,6 +1282,7 @@
     .leader-card {
       background: var(--bone);
       overflow: hidden;
+      border-radius: 8px;
       transition: transform 0.25s ease;
     }
     .leader-card:hover { transform: translateY(-5px); }
