@@ -1509,51 +1509,70 @@
     /* =====================================================
        CONTACT CTA
     ===================================================== */
-    #contact { background: var(--sage); padding: 5rem 1.5rem; }
+    #contact {
+      background: var(--midnight);
+      padding: 7rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    #contact::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 50%, rgba(131,173,54,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
 
     .contact-inner {
-      max-width: 700px;
+      max-width: 780px;
       margin: 0 auto;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     #contact h2 {
-      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
-      color: var(--bone);
-      margin-bottom: 1rem;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    #contact h2 em {
+      font-style: normal;
+      color: var(--leaf);
     }
 
     #contact p {
-      font-size: 1rem;
-      color: rgba(219,211,201,0.82);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: rgba(219,211,201,0.75);
       line-height: 1.72;
-      max-width: 520px;
-      margin: 0 auto 2.5rem;
+      max-width: 560px;
+      margin: 0 auto 3rem;
     }
 
-    .contact-ctas {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .contact-direct {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem 2.5rem;
-    }
-    .contact-direct a {
+    .contact-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--leaf);
+      color: var(--midnight);
       font-family: var(--font-body);
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: rgba(219,211,201,0.7);
-      letter-spacing: 0.05em;
-      transition: color 0.2s;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+      padding: 1.1rem 2.4rem;
+      border-radius: 4px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(131,173,54,0.25);
     }
-    .contact-direct a:hover { color: var(--bone); }
+    .contact-cta-btn:hover {
+      background: #6f9129;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(131,173,54,0.35);
+    }
+    .contact-cta-btn svg { flex-shrink: 0; }
 
     /* =====================================================
        FOOTER
@@ -2295,20 +2314,17 @@
   <!-- CONTACT CTA ===================================== -->
   <section id="contact" aria-labelledby="contact-heading">
     <div class="contact-inner">
-      <span class="eyebrow eyebrow--light">Get in Touch</span>
-      <h2 id="contact-heading" class="fu">Ready to talk through your project?</h2>
-      <p class="fu d1">
-        We keep our engagements focused and our conversations direct. Tell us what you are working on and we will tell you honestly what we think — including when we are not the right fit.
+      <span class="eyebrow eyebrow--light fu">Let's Work Together</span>
+      <h2 id="contact-heading" class="fu d1">Your next project deserves a team that has <em>actually done this.</em></h2>
+      <p class="fu d2">
+        No sales pitch. No offshore delivery. Just experienced people who have run government — sitting across the table from you to solve a real problem.
       </p>
-      <div class="contact-ctas fu d2">
-        <a href="mailto:canopy@cmcgfla.com" class="btn btn-ghost">Email Our Team</a>
-        <a href="tel:+18503910596" class="btn btn-ghost">Call Us</a>
-      </div>
-      <div class="contact-direct fu d3">
-        <a href="mailto:canopy@cmcgfla.com">canopy@cmcgfla.com</a>
-        <a href="tel:+18503910596">850.391.0596</a>
-        <span style="color: rgba(219,211,201,0.45); font-size:0.82rem;">3512 Maclay Blvd S, Tallahassee, FL 32312</span>
-      </div>
+      <a href="contact.html" class="contact-cta-btn fu d3">
+        Start the Conversation
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
     </div>
   </section>
 
