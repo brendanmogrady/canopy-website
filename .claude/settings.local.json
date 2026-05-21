@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start python *)",
+      "Bash(Start-Sleep -Seconds 2)",
+      "Bash(Invoke-WebRequest -Uri \"http://localhost:8080\" -UseBasicParsing -TimeoutSec 3)",
+      "Bash(Select-Object -ExpandProperty StatusCode)",
+      "PowerShell(Start-Sleep -Seconds 1; try { $r = Invoke-WebRequest -Uri \"http://localhost:8080\" -UseBasicParsing -TimeoutSec 4; $r.StatusCode } catch { $_.Exception.Message })",
+      "WebFetch(domain:www.canopymcgroup.com)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:8080\" -UseBasicParsing -TimeoutSec 4; \"Server OK — Status $\\($r.StatusCode\\)\" } catch { \"Server down: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(try { \\(Invoke-WebRequest -Uri \"http://localhost:8080\" -UseBasicParsing -TimeoutSec 4\\).StatusCode } catch { \"down\" })",
+      "WebFetch(domain:elderaffairs.org)",
+      "WebFetch(domain:www.floridadisaster.org)",
+      "WebFetch(domain:www.dms.myflorida.com)",
+      "WebFetch(domain:ahca.myflorida.com)",
+      "PowerShell(Invoke-WebRequest -Uri \"https://www.dms.myflorida.com/_next/static/media/DMS-logo.8bbfbc2a.svg\" -OutFile \"C:\\\\Users\\\\brend\\\\canopy-website\\\\images\\\\logo-dms.svg\" -UseBasicParsing; \"DMS done\")",
+      "PowerShell(Invoke-WebRequest -Uri \"https://www.floridadisaster.org/Content/images/logo-full.png\" -OutFile \"C:\\\\Users\\\\brend\\\\canopy-website\\\\images\\\\logo-fdem.png\" -UseBasicParsing; \"FDEM done\")",
+      "PowerShell(Invoke-WebRequest -Uri \"https://elderaffairs.org/wp-content/uploads/2025/10/Website-logo.webp\" -OutFile \"C:\\\\Users\\\\brend\\\\canopy-website\\\\images\\\\logo-elderaffairs.webp\" -UseBasicParsing; \"Elder Affairs done\")",
+      "WebFetch(domain:ahca.fl.gov)",
+      "WebFetch(domain:www.myfloridaprepaid.com)",
+      "WebFetch(domain:floridacommerce.gov)",
+      "PowerShell(Invoke-WebRequest -Uri \"https://www.myfloridaprepaid.com/wp-content/uploads/Florida-Prepaid-RGB-gradient.png\" -OutFile \"C:\\\\Users\\\\brend\\\\canopy-website\\\\images\\\\logo-flprepaid.png\" -UseBasicParsing; \"FL Prepaid done\")",
+      "WebFetch(domain:www.floridacommerce.gov)",
+      "WebFetch(domain:web.archive.org)",
+      "PowerShell(Invoke-WebRequest -Uri \"https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg\" -OutFile \"C:\\\\Users\\\\brend\\\\canopy-website\\\\images\\\\logo-salesforce.svg\" -UseBasicParsing; \"done\")",
+      "Bash(curl -s -o \"C:/Users/brend/canopy-website/favicon.ico\" \"https://www.canopymcgroup.com/favicon.ico\")",
+      "PowerShell(python --version 2>&1; python3 --version 2>&1)",
+      "Bash(magick --version)",
+      "Bash(python *)",
+      "Bash(npx --yes serve . --listen 3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "WebFetch(domain:coastalcloud.us)",
+      "PowerShell(python --version 2>$null; node --version 2>$null)",
+      "PowerShell(Start-Process powershell -ArgumentList \"-NoExit\", \"-Command\", \"Set-Location 'C:\\\\Users\\\\brend\\\\canopy-website'; python -m http.server 8080\" -WindowStyle Normal)",
+      "PowerShell(npx --yes serve C:\\\\Users\\\\brend\\\\canopy-website -p 3000 2>&1 | Select-Object -First 5)",
+      "Bash(mkdir -p images/team images/logos images/hero)",
+      "Bash(mv \"images/Damon Brick Headshot.jpg\" images/team/damon-steffens.jpg)",
+      "Bash(mv \"images/Brian Brick Headshot.jpg\" images/team/brian-swords.jpg)",
+      "Bash(mv \"images/Ed Brick Headshot.jpg\" images/team/ed-wynn.jpg)",
+      "Bash(mv \"images/Will Brick Headshot.jpg\" images/team/will-currie.jpg)"
+    ]
+  }
+}

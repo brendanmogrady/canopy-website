@@ -1,0 +1,1105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Canopy Management Consulting Group holds active contracts on GSA MAS (47QRAA23D001H), TIPS Cooperative, and Missouri IT Purchasing. Procurement officers can engage Canopy without a new competitive solicitation.">
+  <meta name="robots" content="index, follow">
+  <title>Procurement &amp; Contracts | Canopy Management Consulting Group</title>
+
+  <link rel="canonical" href="https://canopymcgroup.com/procurement">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Procurement & Contractual Vehicles — Canopy Management Consulting Group",
+    "url": "https://canopymcgroup.com/procurement",
+    "description": "Active contract vehicles for procuring Canopy Management Consulting Group services — GSA MAS, TIPS Cooperative, and Missouri IT Purchasing.",
+    "mainEntity": {
+      "@type": "Organization",
+      "@id": "https://canopymcgroup.com/#organization",
+      "name": "Canopy Management Consulting Group",
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "name": "GSA Multiple Award Schedule 47QRAA23D001H" },
+        { "@type": "EducationalOccupationalCredential", "name": "TIPS Cooperative Contract 240101" },
+        { "@type": "EducationalOccupationalCredential", "name": "TIPS Cooperative Contract 240403" },
+        { "@type": "EducationalOccupationalCredential", "name": "TIPS Cooperative Contract 240601" },
+        { "@type": "EducationalOccupationalCredential", "name": "Missouri IT Contract CT242213022" }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Raleway:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* =====================================================
+       TOKENS & RESET
+    ===================================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --midnight: #0E1726;
+      --bone:     #DBD3C9;
+      --sage:     #738063;
+      --leaf:     #83AD36;
+      --stone:    #6B5C50;
+      --offwhite: #F0EBE5;
+      --white:    #FFFFFF;
+
+      --font-head:  'Montserrat', sans-serif;
+      --font-body:  'Raleway', sans-serif;
+      --font-quote: Cambria, 'Times New Roman', Georgia, serif;
+
+      --mw: 1180px;
+      --sp: 6rem 1.5rem;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--midnight);
+      background: var(--bone);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a   { color: inherit; text-decoration: none; }
+    ul  { list-style: none; }
+
+    .skip-link {
+      position: absolute; left: -9999px; top: 1rem;
+      background: var(--leaf); color: var(--midnight);
+      padding: 0.5rem 1rem; font-weight: 700;
+      font-family: var(--font-body); border-radius: 3px; z-index: 9999;
+    }
+    .skip-link:focus { left: 1rem; }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-head);
+      font-weight: 700;
+      line-height: 1.13;
+      letter-spacing: -0.02em;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 0.9rem;
+    }
+    .eyebrow--light { color: var(--leaf); }
+
+    .wrap { max-width: var(--mw); margin: 0 auto; padding: 0 1.5rem; }
+
+    .fu {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .fu.in { opacity: 1; transform: none; }
+    .fu.d1 { transition-delay: 0.10s; }
+    .fu.d2 { transition-delay: 0.20s; }
+    .fu.d3 { transition-delay: 0.30s; }
+    .fu.d4 { transition-delay: 0.40s; }
+
+    .arrow-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-family: var(--font-body); font-weight: 600;
+      font-size: 0.8rem; letter-spacing: 0.07em; text-transform: uppercase;
+      transition: gap 0.2s, color 0.2s;
+    }
+    .arrow-link::after { content: '→'; }
+    .arrow-link:hover  { gap: 0.75rem; }
+    .arrow-link--leaf  { color: var(--leaf); }
+    .arrow-link--sage  { color: var(--sage); }
+    .arrow-link--sage:hover { color: var(--leaf); }
+    .arrow-link--bone  { color: var(--bone); }
+    .arrow-link--bone:hover { color: var(--white); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 1.8rem; font-family: var(--font-body);
+      font-weight: 600; font-size: 0.92rem; letter-spacing: 0.03em;
+      border-radius: 3px; cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      border: 2px solid transparent;
+    }
+    .btn-leaf   { background: #E8921A; color: var(--midnight); border-color: #E8921A; }
+    .btn-leaf:hover { background: #C97A0D; border-color: #C97A0D; }
+    .btn-ghost  { background: transparent; color: var(--bone); border-color: rgba(219,211,201,0.45); }
+    .btn-ghost:hover { border-color: var(--bone); }
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+    #site-header {
+      position: fixed; inset: 0 0 auto; z-index: 200;
+      padding: 1.2rem 1.75rem;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background 0.35s ease, box-shadow 0.35s ease;
+    }
+    #site-header.scrolled {
+      background: rgba(14,23,38,0.97);
+      box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+    }
+
+    .logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+    .logo-wordmark { font-family: var(--font-head); font-weight: 700; font-size: clamp(0.7rem, 1vw, 0.85rem); letter-spacing: 0.12em; text-transform: uppercase; color: var(--bone); line-height: 1.35; }
+    @media (max-width: 640px) { .logo-wordmark { display: none; } }
+    .logo-img  { height: 48px; width: auto; }
+
+    .main-nav { display: flex; align-items: center; gap: 1.75rem; }
+    .main-nav a {
+      font-family: var(--font-body); font-weight: 600; font-size: 0.8rem;
+      letter-spacing: 0.09em; text-transform: uppercase;
+      color: rgba(219,211,201,0.8); transition: color 0.2s;
+    }
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] { color: var(--bone); }
+    .main-nav .nav-cta {
+      background: #E8921A; color: var(--midnight) !important;
+      padding: 0.5rem 1rem; border-radius: 3px;
+    }
+    .main-nav .nav-cta:hover { background: #C97A0D; }
+
+    .nav-toggle {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px; z-index: 201;
+    }
+    .nav-toggle span {
+      display: block; width: 24px; height: 2px; background: var(--bone);
+      transition: transform 0.3s, opacity 0.3s; transform-origin: center;
+    }
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* =====================================================
+       PAGE HERO
+    ===================================================== */
+    #page-hero {
+      background: var(--midnight);
+      padding: 10rem 1.5rem 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+    #page-hero::before {
+      content: '';
+      position: absolute;
+      right: -120px; top: -120px;
+      width: 520px; height: 520px;
+      border-radius: 50%;
+      border: 1px solid rgba(131,173,54,0.07);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: var(--mw);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    #page-hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      font-weight: 800;
+      color: var(--bone);
+      margin-bottom: 1.25rem;
+      line-height: 1.1;
+      max-width: 780px;
+    }
+    #page-hero h1 em {
+      font-style: normal;
+      color: var(--leaf);
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: rgba(219,211,201,0.72);
+      line-height: 1.78;
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-contract-strip {
+      display: flex;
+      gap: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(219,211,201,0.1);
+      flex-wrap: wrap;
+    }
+
+    .hero-contract-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .hci-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: rgba(219,211,201,0.35);
+    }
+
+    .hci-val {
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--bone);
+      letter-spacing: 0.02em;
+    }
+
+    .hci-active {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--leaf);
+    }
+    .hci-active::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--leaf);
+    }
+
+    /* =====================================================
+       CONTRACT SECTIONS
+    ===================================================== */
+    .contract-section {
+      padding: var(--sp);
+    }
+    .contract-section--light { background: var(--offwhite); }
+    .contract-section--bone  { background: var(--bone); }
+    .contract-section--dark  { background: var(--midnight); }
+
+    .contract-inner {
+      max-width: var(--mw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .contract-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .contract-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px; height: 52px;
+      border-radius: 4px;
+      background: rgba(131,173,54,0.1);
+      border: 1px solid rgba(131,173,54,0.2);
+      margin-bottom: 1.5rem;
+    }
+    .contract-section--dark .contract-badge {
+      background: rgba(131,173,54,0.08);
+      border-color: rgba(131,173,54,0.15);
+    }
+
+    .contract-badge svg { color: var(--leaf); }
+
+    .contract-sidebar h2 {
+      font-size: clamp(1.3rem, 2vw, 1.65rem);
+      color: var(--midnight);
+      margin-bottom: 0.75rem;
+    }
+    .contract-section--dark .contract-sidebar h2 { color: var(--bone); }
+
+    .contract-sidebar p {
+      font-size: 0.85rem;
+      color: var(--stone);
+      line-height: 1.72;
+    }
+    .contract-section--dark .contract-sidebar p { color: rgba(219,211,201,0.55); }
+
+    .contract-meta {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      background: rgba(131,173,54,0.05);
+      border-left: 3px solid var(--leaf);
+      padding: 0.75rem 1rem;
+    }
+    .contract-section--dark .meta-row {
+      background: rgba(219,211,201,0.04);
+    }
+
+    .meta-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+
+    .meta-val {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--midnight);
+    }
+    .contract-section--dark .meta-val { color: var(--bone); }
+
+    /* Contract detail body */
+    .contract-body h3 {
+      font-size: 1.25rem;
+      color: var(--midnight);
+      margin-bottom: 0.9rem;
+    }
+    .contract-section--dark .contract-body h3 { color: var(--bone); }
+
+    .contract-body > p {
+      font-size: 0.93rem;
+      color: var(--stone);
+      line-height: 1.82;
+      margin-bottom: 2rem;
+    }
+    .contract-section--dark .contract-body > p { color: rgba(219,211,201,0.6); }
+
+    .contract-body h4 {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid rgba(154,138,123,0.25);
+    }
+    .contract-section--dark .contract-body h4 {
+      color: rgba(219,211,201,0.35);
+      border-bottom-color: rgba(219,211,201,0.1);
+    }
+
+    /* NAICS table */
+    .naics-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2.5rem;
+    }
+
+    .naics-table thead th {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--stone);
+      text-align: left;
+      padding: 0.6rem 1rem;
+      background: rgba(131,173,54,0.05);
+      border-bottom: 2px solid rgba(131,173,54,0.15);
+    }
+
+    .naics-table tbody tr {
+      border-bottom: 1px solid rgba(154,138,123,0.12);
+      transition: background 0.15s;
+    }
+    .naics-table tbody tr:hover { background: rgba(131,173,54,0.04); }
+
+    .naics-table tbody td {
+      padding: 0.8rem 1rem;
+      font-size: 0.85rem;
+      color: var(--stone);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .naics-table tbody td:first-child {
+      font-family: var(--font-body);
+      font-weight: 700;
+      color: var(--midnight);
+      white-space: nowrap;
+      width: 100px;
+    }
+
+    /* Eligible users list */
+    .eligible-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-bottom: 2.5rem;
+    }
+
+    .eligible-item {
+      background: rgba(131,173,54,0.05);
+      border-left: 3px solid rgba(131,173,54,0.3);
+      padding: 0.7rem 1rem;
+      font-size: 0.83rem;
+      color: var(--midnight);
+      font-weight: 500;
+    }
+    .contract-section--dark .eligible-item {
+      background: rgba(219,211,201,0.04);
+      color: var(--bone);
+    }
+
+    /* TIPS awards table */
+    .tips-awards {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 2.5rem;
+    }
+
+    .tips-award {
+      display: grid;
+      grid-template-columns: 100px 1fr auto;
+      align-items: center;
+      gap: 1.5rem;
+      background: rgba(131,173,54,0.05);
+      border-left: 3px solid var(--leaf);
+      padding: 1.1rem 1.25rem;
+    }
+
+    .tips-award-num {
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--midnight);
+    }
+
+    .tips-award-name {
+      font-size: 0.88rem;
+      color: var(--stone);
+      font-weight: 500;
+    }
+
+    .tips-award-exp {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--leaf);
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    /* Ordering CTA box */
+    .ordering-box {
+      background: var(--midnight);
+      padding: 2rem 2.25rem;
+      margin-top: 2.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.75rem;
+    }
+    .contract-section--dark .ordering-box {
+      background: rgba(219,211,201,0.05);
+      border: 1px solid rgba(219,211,201,0.1);
+    }
+
+    .ordering-box-icon {
+      flex-shrink: 0;
+      width: 40px; height: 40px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--leaf);
+    }
+
+    .ordering-box h4 {
+      font-size: 0.82rem;
+      color: var(--bone);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0;
+      text-transform: none;
+      border: none;
+      padding: 0;
+      font-weight: 700;
+    }
+    .contract-section--dark .ordering-box h4 { color: var(--bone); }
+
+    .ordering-box p {
+      font-size: 0.82rem;
+      color: rgba(219,211,201,0.55);
+      line-height: 1.65;
+    }
+
+    /* =====================================================
+       CONTACT CTA
+    ===================================================== */
+    #proc-cta {
+      background: var(--sage);
+      padding: 5.5rem 1.5rem;
+      text-align: center;
+    }
+
+    #proc-cta h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      color: var(--bone);
+      margin-bottom: 0.9rem;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #proc-cta p {
+      font-size: 0.97rem;
+      color: rgba(219,211,201,0.8);
+      line-height: 1.72;
+      max-width: 500px;
+      margin: 0 auto 2.25rem;
+    }
+    .cta-btns {
+      display: flex; justify-content: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+    footer { background: var(--midnight); padding: 4.5rem 1.5rem 2.5rem; }
+    .footer-inner { max-width: var(--mw); margin: 0 auto; }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(219,211,201,0.09);
+    }
+
+    .footer-brand p {
+      font-size: 0.83rem;
+      color: rgba(219,211,201,0.42);
+      line-height: 1.72;
+      max-width: 290px;
+      margin: 1rem 0 1.25rem;
+    }
+    .footer-addr {
+      font-style: normal;
+      font-size: 0.8rem;
+      color: rgba(219,211,201,0.35);
+      line-height: 1.85;
+    }
+    .footer-addr a { transition: color 0.2s; }
+    .footer-addr a:hover { color: rgba(219,211,201,0.75); }
+
+    .footer-col h4 {
+      font-family: var(--font-head);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(219,211,201,0.45);
+      margin-bottom: 1.25rem;
+    }
+    .footer-col ul li { margin-bottom: 0.55rem; }
+    .footer-col ul li a {
+      font-size: 0.83rem;
+      color: rgba(219,211,201,0.42);
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: rgba(219,211,201,0.85); }
+
+    .footer-cred-list { margin-top: 1.5rem; }
+    .footer-cred-list li {
+      font-size: 0.72rem;
+      color: rgba(219,211,201,0.28);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-legal {
+      font-size: 0.73rem;
+      color: rgba(219,211,201,0.25);
+      line-height: 1.65;
+    }
+    .footer-legal a { color: inherit; transition: color 0.2s; }
+    .footer-legal a:hover { color: rgba(219,211,201,0.5); }
+    .footer-social { display: flex; gap: 0.75rem; }
+    .footer-social a {
+      width: 34px; height: 34px;
+      border: 1px solid rgba(219,211,201,0.14);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(219,211,201,0.38);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .footer-social a:hover { border-color: var(--leaf); color: var(--leaf); }
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+    @media (max-width: 1024px) {
+      .contract-inner { grid-template-columns: 240px 1fr; gap: 4rem; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --sp: 4rem 1.25rem; }
+
+      .main-nav { display: none; }
+      .main-nav.open {
+        display: flex; flex-direction: column;
+        position: fixed; inset: 0;
+        background: rgba(14,23,38,0.98);
+        z-index: 199; align-items: center;
+        justify-content: center; gap: 2rem; padding: 2rem;
+      }
+      .main-nav.open a { font-size: 1.1rem; }
+      .nav-toggle { display: flex; }
+
+      .contract-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .contract-sidebar { position: static; }
+      .eligible-list { grid-template-columns: 1fr; }
+      .tips-award { grid-template-columns: 80px 1fr; }
+      .tips-award-exp { grid-column: 2; text-align: left; }
+      .hero-contract-strip { gap: 1.5rem; }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .naics-table { font-size: 0.78rem; }
+      .ordering-box { flex-direction: column; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- HEADER ============================================ -->
+<header id="site-header" role="banner">
+  <a href="index.html" class="logo-wrap" aria-label="Canopy Management Consulting Group — Home">
+    <img src="images/logos/logo-icon.png" alt="" class="logo-img" aria-hidden="true">
+    <span class="logo-wordmark">Canopy Management<br>Consulting Group</span>
+  </a>
+
+  <nav class="main-nav" id="main-nav" aria-label="Primary navigation">
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="index.html#serve">Industries</a>
+    <a href="index.html#insights">Insights</a>
+    <a href="is-ai-right-for-me.html">Is AI Right for Me?</a>
+    <a href="procurement.html" aria-current="page">Procurement</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html" class="nav-cta">Talk to Our Team</a>
+  </nav>
+
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MAIN ============================================== -->
+<main id="main-content">
+
+  <!-- PAGE HERO ======================================= -->
+  <section id="page-hero" aria-labelledby="hero-heading">
+    <div class="hero-inner wrap">
+      <span class="eyebrow eyebrow--light fu">Procurement</span>
+      <h1 id="hero-heading" class="fu d1">
+        Engage Canopy through an <em>existing contract vehicle.</em>
+      </h1>
+      <p class="hero-sub fu d2">
+        Canopy holds active contracts on GSA MAS, TIPS Cooperative, and Missouri IT Purchasing — giving procurement officers a fast, compliant path to engagement without a new competitive solicitation.
+      </p>
+
+      <div class="hero-contract-strip fu d3">
+        <div class="hero-contract-item">
+          <span class="hci-label">GSA MAS</span>
+          <span class="hci-val">47QRAA23D001H</span>
+          <span class="hci-active">Active through Nov 2027</span>
+        </div>
+        <div class="hero-contract-item">
+          <span class="hci-label">TIPS Cooperative</span>
+          <span class="hci-val">240101 · 240403 · 240601</span>
+          <span class="hci-active">Active through 2027–2029</span>
+        </div>
+        <div class="hero-contract-item">
+          <span class="hci-label">Missouri IT Purchasing</span>
+          <span class="hci-val">CT242213022</span>
+          <span class="hci-active">Active through Apr 2028</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GSA ============================================= -->
+  <section id="gsa" class="contract-section contract-section--light" aria-labelledby="gsa-heading">
+    <div class="contract-inner wrap">
+
+      <div class="contract-sidebar fu">
+        <div class="contract-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <span class="eyebrow">Contract Vehicle 01</span>
+        <h2 id="gsa-heading">GSA Federal Acquisition Service</h2>
+        <p>Multiple Award Schedule — the most widely used federal procurement vehicle, available to a broad range of public sector buyers.</p>
+
+        <div class="contract-meta">
+          <div class="meta-row">
+            <span class="meta-label">Contract Number</span>
+            <span class="meta-val">47QRAA23D001H</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">UEI</span>
+            <span class="meta-val">TALLQMFBKNR9</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Contract Term</span>
+            <span class="meta-val">November 2022 – November 2027</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contract-body fu d1">
+        <h3>A governmentwide vehicle for vetted, efficient procurement.</h3>
+        <p>
+          The GSA Multiple Award Schedule is a governmentwide acquisition vehicle that allows federal agencies and authorized public sector organizations to procure vetted services efficiently. Canopy's GSA contract covers management consulting, IT professional services, grants management, budget and financial management, and cloud computing — the full range of our core service offerings.
+        </p>
+
+        <h4>Approved NAICS Categories</h4>
+        <table class="naics-table">
+          <thead>
+            <tr>
+              <th>NAICS Code</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>541611</td>
+              <td>Management and Financial Consulting, Acquisition and Grants Management, Business Program and Project Management</td>
+            </tr>
+            <tr>
+              <td>541690</td>
+              <td>Technical Consulting Services</td>
+            </tr>
+            <tr>
+              <td>541219</td>
+              <td>Budget and Financial Management Services</td>
+            </tr>
+            <tr>
+              <td>54151S</td>
+              <td>IT Professional Services</td>
+            </tr>
+            <tr>
+              <td>518210C</td>
+              <td>Cloud Computing and Related IT Services</td>
+            </tr>
+            <tr>
+              <td>OLM</td>
+              <td>Order-Level Materials</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Eligible Ordering Organizations</h4>
+        <div class="eligible-list">
+          <div class="eligible-item">Federal Agencies</div>
+          <div class="eligible-item">State Government Entities</div>
+          <div class="eligible-item">Local Government Entities</div>
+          <div class="eligible-item">Tribal Governments</div>
+          <div class="eligible-item">Educational Institutions (K–12 &amp; Higher Ed)</div>
+          <div class="eligible-item">Authorized Cooperatives &amp; Public Organizations</div>
+        </div>
+
+        <div class="ordering-box">
+          <div class="ordering-box-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l.95-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+          </div>
+          <div>
+            <h4>Ready to place a task order?</h4>
+            <p>Contact us at <a href="mailto:canopy@cmcgfla.com" style="color:var(--leaf)">canopy@cmcgfla.com</a> or <a href="tel:8503910596" style="color:var(--leaf)">850.391.0596</a>. We will work with your contracting officer to structure the statement of work and move quickly through the ordering process.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TIPS ============================================ -->
+  <section id="tips" class="contract-section contract-section--dark" aria-labelledby="tips-heading">
+    <div class="contract-inner wrap">
+
+      <div class="contract-sidebar fu">
+        <div class="contract-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <span class="eyebrow eyebrow--light">Contract Vehicle 02</span>
+        <h2 id="tips-heading">TIPS Interlocal Purchasing System</h2>
+        <p>A Texas-based cooperative purchasing program serving public sector buyers nationwide — including schools, municipalities, counties, and nonprofits.</p>
+
+        <div class="contract-meta">
+          <div class="meta-row">
+            <span class="meta-label">Cooperative</span>
+            <span class="meta-val">TIPS — Region 8 ESC, Texas</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Active Awards</span>
+            <span class="meta-val">240101 · 240403 · 240601</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Geographic Scope</span>
+            <span class="meta-val">Nationwide</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contract-body fu d1">
+        <h3>Three active awards covering technology, analytics, and consulting.</h3>
+        <p>
+          TIPS is a national interlocal cooperative purchasing organization that allows member entities to procure goods and services through competitively awarded contracts — without conducting their own procurement. Canopy holds three active TIPS awards, covering the full scope of our technology and consulting practice areas.
+        </p>
+
+        <h4>Active Contract Awards</h4>
+        <div class="tips-awards">
+          <div class="tips-award">
+            <div class="tips-award-num">240101</div>
+            <div class="tips-award-name">Technology Solutions</div>
+            <div class="tips-award-exp">Through May 31, 2029</div>
+          </div>
+          <div class="tips-award">
+            <div class="tips-award-num">240403</div>
+            <div class="tips-award-name">Data Analytics</div>
+            <div class="tips-award-exp">Through June 30, 2027</div>
+          </div>
+          <div class="tips-award">
+            <div class="tips-award-num">240601</div>
+            <div class="tips-award-name">Consulting Services</div>
+            <div class="tips-award-exp">Through August 31, 2029</div>
+          </div>
+        </div>
+
+        <h4>Eligible Member Organizations</h4>
+        <div class="eligible-list">
+          <div class="eligible-item">K–12 School Districts</div>
+          <div class="eligible-item">Colleges &amp; Universities</div>
+          <div class="eligible-item">Municipalities &amp; Cities</div>
+          <div class="eligible-item">Counties</div>
+          <div class="eligible-item">Nonprofit Organizations</div>
+          <div class="eligible-item">Other Public Entities</div>
+        </div>
+
+        <div class="ordering-box">
+          <div class="ordering-box-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l.95-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+          </div>
+          <div>
+            <h4>Ordering through TIPS</h4>
+            <p>TIPS members can engage Canopy directly using any of the three active contract numbers above. Contact us to receive a TIPS-compliant quote or statement of work. Visit <a href="https://www.tips-usa.com" target="_blank" rel="noopener" style="color:var(--leaf)">tips-usa.com</a> to verify membership.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MISSOURI ========================================= -->
+  <section id="missouri" class="contract-section contract-section--bone" aria-labelledby="mo-heading">
+    <div class="contract-inner wrap">
+
+      <div class="contract-sidebar fu">
+        <div class="contract-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+        </div>
+        <span class="eyebrow">Contract Vehicle 03</span>
+        <h2 id="mo-heading">Missouri IT State Purchasing</h2>
+        <p>A competitively awarded IT consulting contract available to Missouri state departments and eligible public entities.</p>
+
+        <div class="contract-meta">
+          <div class="meta-row">
+            <span class="meta-label">Contract Number</span>
+            <span class="meta-val">CT242213022</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Contract Term</span>
+            <span class="meta-val">May 2025 – April 2028</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Issuing Authority</span>
+            <span class="meta-val">State of Missouri — Office of Administration</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contract-body fu d1">
+        <h3>Direct access for Missouri public sector organizations.</h3>
+        <p>
+          Canopy's Missouri IT State Purchasing contract provides a compliant, pre-competed vehicle for Missouri state departments and eligible public entities to procure information technology consulting services. The contract covers the full scope of Canopy's IT consulting practice — from strategy and roadmap development through implementation and ongoing advisory support.
+        </p>
+
+        <h4>Covered Services</h4>
+        <div class="eligible-list">
+          <div class="eligible-item">IT Strategy &amp; Roadmap</div>
+          <div class="eligible-item">Project &amp; Program Management</div>
+          <div class="eligible-item">Enterprise Systems Implementation</div>
+          <div class="eligible-item">Salesforce Implementation &amp; Support</div>
+          <div class="eligible-item">IT Governance &amp; Policy</div>
+          <div class="eligible-item">Vendor &amp; Contract Management</div>
+          <div class="eligible-item">Organizational Change Management</div>
+          <div class="eligible-item">Training &amp; Workforce Enablement</div>
+        </div>
+
+        <h4>Eligible Organizations</h4>
+        <div class="eligible-list">
+          <div class="eligible-item">Missouri State Departments &amp; Agencies</div>
+          <div class="eligible-item">Eligible Missouri Public Entities</div>
+        </div>
+
+        <div class="ordering-box">
+          <div class="ordering-box-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l.95-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+          </div>
+          <div>
+            <h4>Placing an order</h4>
+            <p>Missouri entities can reference contract number CT242213022 when initiating an engagement. Contact us at <a href="mailto:canopy@cmcgfla.com" style="color:var(--leaf)">canopy@cmcgfla.com</a> and we will coordinate directly with your procurement office.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA ============================================= -->
+  <section id="proc-cta" aria-labelledby="proc-cta-heading">
+    <span class="eyebrow eyebrow--light fu">Providing a Clear Path Forward</span>
+    <h2 id="proc-cta-heading" class="fu d1">Not sure which vehicle fits your situation?</h2>
+    <p class="fu d2">
+      Our team works with procurement officers regularly. Tell us your organization type and location — we will identify the fastest compliant path to engagement.
+    </p>
+    <div class="cta-btns fu d3">
+      <a href="index.html#contact" class="btn btn-leaf">Contact Our Team</a>
+      <a href="services.html" class="btn btn-ghost">View Our Services</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER ============================================ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logos/logo-wordmark.png" alt="Canopy Management Consulting Group" style="height:56px; width:auto; opacity:0.85; margin-bottom:1rem;">
+        <p>A boutique Salesforce and management consulting firm built for the specific demands of state government, nonprofits, and grants-heavy public sector organizations.</p>
+        <address class="footer-addr">
+          3512 Maclay Blvd S<br>
+          Tallahassee, FL 32312<br>
+          <a href="tel:8503910596">850.391.0596</a><br>
+          <a href="mailto:canopy@cmcgfla.com">canopy@cmcgfla.com</a>
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#profiles">Leadership</a></li>
+          <li><a href="index.html#case-study">Case Studies</a></li>
+          <li><a href="index.html#insights">Insights</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#salesforce">Salesforce</a></li>
+          <li><a href="services.html#grants">Grants Management</a></li>
+          <li><a href="services.html#finance">Finance &amp; Reporting</a></li>
+          <li><a href="services.html#it-consulting">IT Consulting</a></li>
+          <li><a href="services.html#ocm">Change Management</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Procurement</h4>
+        <ul>
+          <li><a href="#gsa">GSA MAS — 47QRAA23D001H</a></li>
+          <li><a href="#tips">TIPS Cooperative</a></li>
+          <li><a href="#missouri">Missouri IT Contract</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+        <ul class="footer-cred-list">
+          <li>GSA Contract Holder</li>
+          <li>TIPS Cooperative Member</li>
+          <li>Salesforce Partner</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-legal">
+        &copy; 2025 Canopy Management Consulting Group, LLC. All rights reserved.<br>
+        <a href="index.html">Home</a> &middot; <a href="about.html">About</a> &middot; <a href="services.html">Services</a> &middot; <a href="procurement.html">Procurement</a>
+      </p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/canopy-management-consulting-group" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Header scroll effect
+  const hdr = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    hdr.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // Mobile nav toggle
+  const toggle = document.getElementById('nav-toggle');
+  const nav    = document.getElementById('main-nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  nav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+    });
+  });
+
+  // Fade-up on scroll
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); } }),
+    { threshold: 0.12 }
+  );
+  document.querySelectorAll('.fu').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

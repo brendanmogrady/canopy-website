@@ -1,0 +1,1282 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Canopy Management Consulting Group offers Salesforce implementation, grants management, IT consulting, finance & reporting, and organizational change management for government and nonprofits.">
+  <meta name="robots" content="index, follow">
+  <title>Services | Canopy Management Consulting Group</title>
+
+  <link rel="canonical" href="https://canopymcgroup.com/services">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": ["Salesforce Implementation", "Grants Management", "IT Consulting", "Finance and Reporting", "Organizational Change Management"],
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://canopymcgroup.com/#organization",
+      "name": "Canopy Management Consulting Group",
+      "url": "https://canopymcgroup.com",
+      "telephone": "850-391-0596",
+      "email": "canopy@cmcgfla.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3512 Maclay Blvd S",
+        "addressLocality": "Tallahassee",
+        "addressRegion": "FL",
+        "postalCode": "32312"
+      }
+    },
+    "areaServed": ["Florida", "United States"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Raleway:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* =====================================================
+       TOKENS & RESET
+    ===================================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --midnight: #0E1726;
+      --bone:     #DBD3C9;
+      --sage:     #738063;
+      --leaf:     #83AD36;
+      --stone:    #6B5C50;
+      --offwhite: #F0EBE5;
+      --white:    #FFFFFF;
+
+      --font-head:  'Montserrat', sans-serif;
+      --font-body:  'Raleway', sans-serif;
+      --font-quote: Cambria, 'Times New Roman', Georgia, serif;
+
+      --mw: 1180px;
+      --sp: 6rem 1.5rem;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--midnight);
+      background: var(--bone);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a   { color: inherit; text-decoration: none; }
+    ul  { list-style: none; }
+
+    .skip-link {
+      position: absolute; left: -9999px; top: 1rem;
+      background: var(--leaf); color: var(--midnight);
+      padding: 0.5rem 1rem; font-weight: 700;
+      font-family: var(--font-body); border-radius: 3px; z-index: 9999;
+    }
+    .skip-link:focus { left: 1rem; }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-head);
+      font-weight: 700;
+      line-height: 1.13;
+      letter-spacing: -0.02em;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 0.9rem;
+    }
+    .eyebrow--light { color: var(--leaf); }
+
+    .wrap { max-width: var(--mw); margin: 0 auto; padding: 0 1.5rem; }
+
+    .fu {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .fu.in { opacity: 1; transform: none; }
+    .fu.d1 { transition-delay: 0.10s; }
+    .fu.d2 { transition-delay: 0.20s; }
+    .fu.d3 { transition-delay: 0.30s; }
+    .fu.d4 { transition-delay: 0.40s; }
+
+    .arrow-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-family: var(--font-body); font-weight: 600;
+      font-size: 0.8rem; letter-spacing: 0.07em; text-transform: uppercase;
+      transition: gap 0.2s, color 0.2s;
+    }
+    .arrow-link::after { content: '→'; }
+    .arrow-link:hover  { gap: 0.75rem; }
+    .arrow-link--leaf  { color: var(--leaf); }
+    .arrow-link--sage  { color: var(--sage); }
+    .arrow-link--sage:hover { color: var(--leaf); }
+    .arrow-link--bone  { color: var(--bone); }
+    .arrow-link--bone:hover { color: var(--white); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 1.8rem; font-family: var(--font-body);
+      font-weight: 600; font-size: 0.92rem; letter-spacing: 0.03em;
+      border-radius: 3px; cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      border: 2px solid transparent;
+    }
+    .btn-leaf   { background: #E8921A; color: var(--midnight); border-color: #E8921A; }
+    .btn-leaf:hover { background: #C97A0D; border-color: #C97A0D; }
+    .btn-ghost  { background: transparent; color: var(--bone); border-color: rgba(219,211,201,0.45); }
+    .btn-ghost:hover { border-color: var(--bone); }
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+    #site-header {
+      position: fixed; inset: 0 0 auto; z-index: 200;
+      padding: 1.2rem 1.75rem;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background 0.35s ease, box-shadow 0.35s ease;
+    }
+    #site-header.scrolled {
+      background: rgba(14,23,38,0.97);
+      box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+    }
+
+    .logo-wrap { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
+    .logo-wordmark { font-family: var(--font-head); font-weight: 700; font-size: clamp(0.7rem, 1vw, 0.85rem); letter-spacing: 0.12em; text-transform: uppercase; color: var(--bone); line-height: 1.35; }
+    @media (max-width: 640px) { .logo-wordmark { display: none; } }
+    .logo-img  { height: 48px; width: auto; }
+
+    .main-nav { display: flex; align-items: center; gap: 1.75rem; }
+    .main-nav a {
+      font-family: var(--font-body); font-weight: 600; font-size: 0.8rem;
+      letter-spacing: 0.09em; text-transform: uppercase;
+      color: rgba(219,211,201,0.8); transition: color 0.2s;
+    }
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] { color: var(--bone); }
+    .main-nav .nav-cta {
+      background: #E8921A; color: var(--midnight) !important;
+      padding: 0.5rem 1rem; border-radius: 3px;
+    }
+    .main-nav .nav-cta:hover { background: #C97A0D; }
+
+    .nav-toggle {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px; z-index: 201;
+    }
+    .nav-toggle span {
+      display: block; width: 24px; height: 2px; background: var(--bone);
+      transition: transform 0.3s, opacity 0.3s; transform-origin: center;
+    }
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* =====================================================
+       PAGE HERO
+    ===================================================== */
+    #page-hero {
+      background: var(--midnight);
+      padding: 10rem 1.5rem 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+    #page-hero::before {
+      content: '';
+      position: absolute;
+      right: -120px; top: -120px;
+      width: 520px; height: 520px;
+      border-radius: 50%;
+      border: 1px solid rgba(131,173,54,0.07);
+      pointer-events: none;
+    }
+    #page-hero::after {
+      content: '';
+      position: absolute;
+      left: -60px; bottom: -80px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      border: 1px solid rgba(115,128,99,0.06);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: var(--mw);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    #page-hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 800;
+      color: var(--bone);
+      margin-bottom: 1.25rem;
+      line-height: 1.1;
+      max-width: 820px;
+    }
+    #page-hero h1 em {
+      font-style: normal;
+      color: var(--leaf);
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: rgba(219,211,201,0.72);
+      line-height: 1.78;
+      max-width: 600px;
+    }
+
+    /* =====================================================
+       SERVICE JUMP NAV
+    ===================================================== */
+    #service-nav {
+      background: var(--bone);
+      border-bottom: 1px solid rgba(154,138,123,0.25);
+      position: sticky;
+      top: 68px;
+      z-index: 100;
+    }
+
+    .service-nav-inner {
+      max-width: var(--mw);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .service-nav-inner::-webkit-scrollbar { display: none; }
+
+    .service-nav-inner a {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1.1rem 1.4rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--stone);
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .service-nav-inner a:hover {
+      color: var(--midnight);
+      border-bottom-color: var(--sage);
+    }
+    .service-nav-inner a .sn-num {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--leaf);
+      opacity: 0.7;
+    }
+
+    /* =====================================================
+       SHARED SERVICE SECTION
+    ===================================================== */
+    .svc-section {
+      padding: var(--sp);
+    }
+    .svc-section--light { background: var(--offwhite); }
+    .svc-section--white { background: var(--white); }
+    .svc-section--bone  { background: var(--bone); }
+    .svc-section--dark  { background: var(--midnight); }
+
+    .svc-inner {
+      max-width: var(--mw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .svc-label {
+      position: sticky;
+      top: 130px;
+    }
+
+    .svc-num {
+      font-family: var(--font-head);
+      font-size: 4.5rem;
+      font-weight: 800;
+      line-height: 1;
+      color: rgba(131,173,54,0.12);
+      letter-spacing: -0.04em;
+      margin-bottom: 0.5rem;
+    }
+    .svc-section--dark .svc-num { color: rgba(131,173,54,0.08); }
+
+    .svc-label h2 {
+      font-size: clamp(1.5rem, 2.2vw, 1.9rem);
+      color: var(--midnight);
+      margin-bottom: 1rem;
+    }
+    .svc-section--dark .svc-label h2 { color: var(--bone); }
+
+    .svc-lead {
+      font-size: 0.9rem;
+      color: var(--stone);
+      line-height: 1.78;
+    }
+    .svc-section--dark .svc-lead { color: rgba(219,211,201,0.6); }
+
+    .svc-lead-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-top: 0.4rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--sage);
+      transition: color 0.2s;
+    }
+    .svc-lead-link::after { content: '↓'; }
+    .svc-lead-link:hover { color: var(--leaf); }
+
+    .svc-content h3 {
+      font-size: clamp(1.3rem, 2vw, 1.65rem);
+      color: var(--midnight);
+      margin-bottom: 1rem;
+      margin-top: 0.25rem;
+    }
+    .svc-section--dark .svc-content h3 { color: var(--bone); }
+
+    .svc-content > p {
+      font-size: 0.95rem;
+      color: var(--stone);
+      line-height: 1.82;
+      margin-bottom: 2rem;
+    }
+    .svc-section--dark .svc-content > p { color: rgba(219,211,201,0.65); }
+
+    .svc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 2rem;
+    }
+
+    .svc-list li {
+      background: rgba(131,173,54,0.05);
+      border-left: 3px solid var(--leaf);
+      padding: 0.9rem 1.25rem;
+      font-size: 0.88rem;
+      color: var(--midnight);
+      font-weight: 500;
+      line-height: 1.55;
+    }
+    .svc-section--dark .svc-list li {
+      background: rgba(219,211,201,0.04);
+      border-left-color: var(--leaf);
+      color: var(--bone);
+    }
+
+    .svc-list li span {
+      display: block;
+      font-size: 0.77rem;
+      color: var(--stone);
+      font-weight: 400;
+      margin-top: 0.2rem;
+      line-height: 1.5;
+    }
+    .svc-section--dark .svc-list li span { color: rgba(154,138,123,0.8); }
+
+    .svc-callout {
+      background: var(--midnight);
+      padding: 1.75rem 2rem;
+      margin-top: 2rem;
+    }
+    .svc-section--dark .svc-callout {
+      background: rgba(219,211,201,0.05);
+      border: 1px solid rgba(219,211,201,0.1);
+    }
+
+    .svc-callout p {
+      font-family: var(--font-quote);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--bone);
+      line-height: 1.72;
+    }
+    .svc-callout strong {
+      font-style: normal;
+      color: var(--leaf);
+    }
+
+    /* =====================================================
+       GRANTS PROGRAMS GRID
+    ===================================================== */
+    .grants-programs {
+      margin-top: 2.5rem;
+    }
+
+    .grants-programs h4 {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(154,138,123,0.25);
+    }
+
+    .grants-col-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .grants-col h5 {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--leaf);
+      margin-bottom: 0.75rem;
+    }
+
+    .grants-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .grants-col ul li {
+      font-size: 0.83rem;
+      color: var(--stone);
+      line-height: 1.5;
+      padding-left: 0.9rem;
+      position: relative;
+    }
+    .grants-col ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--leaf);
+      font-weight: 700;
+    }
+
+    /* =====================================================
+       SALESFORCE CREDENTIALS STRIP
+    ===================================================== */
+    .sf-creds {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 2.5rem;
+    }
+
+    .sf-cred {
+      background: var(--midnight);
+      border-top: 3px solid var(--leaf);
+      padding: 1.75rem 1.75rem 1.5rem;
+      text-align: center;
+    }
+
+    .sf-cred-val {
+      font-family: var(--font-head);
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--leaf);
+      line-height: 1;
+      margin-bottom: 0.45rem;
+    }
+
+    .sf-cred-lbl {
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: rgba(219,211,201,0.78);
+      line-height: 1.5;
+    }
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+    #services-cta {
+      background: var(--sage);
+      padding: 5.5rem 1.5rem;
+      text-align: center;
+    }
+
+    #services-cta h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      color: var(--bone);
+      margin-bottom: 0.9rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #services-cta p {
+      font-size: 0.97rem;
+      color: rgba(219,211,201,0.8);
+      line-height: 1.72;
+      max-width: 520px;
+      margin: 0 auto 2.25rem;
+    }
+    .cta-btns {
+      display: flex; justify-content: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+    footer { background: var(--midnight); padding: 4.5rem 1.5rem 2.5rem; }
+    .footer-inner { max-width: var(--mw); margin: 0 auto; }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(219,211,201,0.09);
+    }
+
+    .footer-brand p {
+      font-size: 0.83rem;
+      color: rgba(219,211,201,0.42);
+      line-height: 1.72;
+      max-width: 290px;
+      margin: 1rem 0 1.25rem;
+    }
+    .footer-addr {
+      font-style: normal;
+      font-size: 0.8rem;
+      color: rgba(219,211,201,0.35);
+      line-height: 1.85;
+    }
+    .footer-addr a { transition: color 0.2s; }
+    .footer-addr a:hover { color: rgba(219,211,201,0.75); }
+
+    .footer-col h4 {
+      font-family: var(--font-head);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(219,211,201,0.45);
+      margin-bottom: 1.25rem;
+    }
+    .footer-col ul li { margin-bottom: 0.55rem; }
+    .footer-col ul li a {
+      font-size: 0.83rem;
+      color: rgba(219,211,201,0.42);
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: rgba(219,211,201,0.85); }
+
+    .footer-cred-list { margin-top: 1.5rem; }
+    .footer-cred-list li {
+      font-size: 0.72rem;
+      color: rgba(219,211,201,0.28);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-legal {
+      font-size: 0.73rem;
+      color: rgba(219,211,201,0.25);
+      line-height: 1.65;
+    }
+    .footer-legal a { color: inherit; transition: color 0.2s; }
+    .footer-legal a:hover { color: rgba(219,211,201,0.5); }
+    .footer-social { display: flex; gap: 0.75rem; }
+    .footer-social a {
+      width: 34px; height: 34px;
+      border: 1px solid rgba(219,211,201,0.14);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(219,211,201,0.38);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .footer-social a:hover { border-color: var(--leaf); color: var(--leaf); }
+
+    /* =====================================================
+       HOW TO BUY STRIP
+    ===================================================== */
+    #how-to-buy {
+      background: var(--midnight);
+      padding: 5rem 1.5rem;
+    }
+
+    .htb-inner {
+      max-width: var(--mw);
+      margin: 0 auto;
+    }
+
+    .htb-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    #how-to-buy h2 {
+      font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+      color: var(--bone);
+      max-width: 520px;
+    }
+
+    .htb-contracts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .htb-contract {
+      background: rgba(219,211,201,0.04);
+      border: 1px solid rgba(219,211,201,0.09);
+      padding: 2rem 2rem 2.25rem;
+      position: relative;
+      transition: background 0.2s;
+    }
+    .htb-contract:hover { background: rgba(219,211,201,0.07); }
+    .htb-contract::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: var(--leaf);
+    }
+
+    .htb-vehicle {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--leaf);
+      margin-bottom: 0.6rem;
+    }
+
+    .htb-contract h3 {
+      font-size: 1.05rem;
+      color: var(--bone);
+      margin-bottom: 0.35rem;
+      font-weight: 700;
+    }
+
+    .htb-contract-num {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--stone);
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+
+    .htb-contract p {
+      font-size: 0.83rem;
+      color: rgba(219,211,201,0.55);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+
+    .htb-expiry {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: rgba(131,173,54,0.7);
+    }
+    .htb-expiry::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--leaf);
+      opacity: 0.7;
+    }
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+    @media (max-width: 1024px) {
+      .svc-inner { grid-template-columns: 260px 1fr; gap: 4rem; }
+      .htb-contracts { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --sp: 4rem 1.25rem; }
+
+      .main-nav { display: none; }
+      .main-nav.open {
+        display: flex; flex-direction: column;
+        position: fixed; inset: 0;
+        background: rgba(14,23,38,0.98);
+        z-index: 199; align-items: center;
+        justify-content: center; gap: 2rem; padding: 2rem;
+      }
+      .main-nav.open a { font-size: 1.1rem; }
+      .nav-toggle { display: flex; }
+
+      .svc-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .svc-label { position: static; }
+      .svc-num { font-size: 3rem; }
+      .grants-col-wrap { grid-template-columns: 1fr; gap: 1.5rem; }
+      .sf-creds { grid-template-columns: 1fr; }
+      .htb-contracts { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .service-nav-inner a { padding: 1rem 1rem; font-size: 0.68rem; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- HEADER ============================================ -->
+<header id="site-header" role="banner">
+  <a href="index.html" class="logo-wrap" aria-label="Canopy Management Consulting Group — Home">
+    <img src="images/logos/logo-icon.png" alt="" class="logo-img" aria-hidden="true">
+    <span class="logo-wordmark">Canopy Management<br>Consulting Group</span>
+  </a>
+
+  <nav class="main-nav" id="main-nav" aria-label="Primary navigation">
+    <a href="about.html">About</a>
+    <a href="services.html" aria-current="page">Services</a>
+    <a href="index.html#serve">Industries</a>
+    <a href="index.html#insights">Insights</a>
+    <a href="is-ai-right-for-me.html">Is AI Right for Me?</a>
+    <a href="procurement.html">Procurement</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html" class="nav-cta">Talk to Our Team</a>
+  </nav>
+
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MAIN ============================================== -->
+<main id="main-content">
+
+  <!-- PAGE HERO ======================================= -->
+  <section id="page-hero" aria-labelledby="hero-heading">
+    <div class="hero-inner wrap">
+      <span class="eyebrow eyebrow--light fu">Our Services</span>
+      <h1 id="hero-heading" class="fu d1">
+        We work where the <em>stakes are real</em> — government systems, federal grants, and the organizations that depend on both.
+      </h1>
+      <p class="hero-sub fu d2">
+        Five practice areas. One firm that has operated every function it now advises on. No learning curve at your expense.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICE JUMP NAV ================================ -->
+  <nav id="service-nav" aria-label="Jump to service">
+    <div class="service-nav-inner">
+      <a href="#it-consulting"><span class="sn-num">01</span> IT Consulting</a>
+      <a href="#grants"><span class="sn-num">02</span> Grants Management</a>
+      <a href="#finance"><span class="sn-num">03</span> Finance &amp; Reporting</a>
+      <a href="#ocm"><span class="sn-num">04</span> Change Management</a>
+      <a href="#salesforce"><span class="sn-num">05</span> Salesforce</a>
+    </div>
+  </nav>
+
+  <!-- 01 · IT CONSULTING ============================== -->
+  <section id="it-consulting" class="svc-section svc-section--light" aria-labelledby="it-heading">
+    <div class="svc-inner wrap">
+
+      <div class="svc-label fu">
+        <div class="svc-num">01</div>
+        <span class="eyebrow">Service Area</span>
+        <h2 id="it-heading">Information Technology Consulting</h2>
+        <p class="svc-lead">
+          Led by executives who served as CIO and Deputy CIO of a major Florida state agency — not outside advisors, but the people who ran the systems.
+        </p>
+      </div>
+
+      <div class="svc-content fu d1">
+        <h3>Technology moves fast. The right advisors move with it.</h3>
+        <p>
+          Technology continues to evolve at a rapid pace, and having the right advisors is critical to keeping pace with change. Canopy approaches every technology engagement by considering customers, stakeholders, and internal users — pursuing solutions that are innovative, practical, and built to last beyond the project close-out date.
+        </p>
+
+        <ul class="svc-list">
+          <li>
+            IT Strategy &amp; Roadmap Development
+            <span>Aligning technology investment to mission priorities, procurement cycles, and long-term operational capacity.</span>
+          </li>
+          <li>
+            Project Management &amp; PMO Support
+            <span>Structured oversight for complex IT programs — from planning and procurement through delivery and post-go-live stabilization.</span>
+          </li>
+          <li>
+            Enterprise Systems Implementation
+            <span>End-to-end support for CRM, ERP, grants, and case management systems across state and local government environments.</span>
+          </li>
+          <li>
+            IT Governance &amp; Policy
+            <span>Developing frameworks, standards, and operating procedures that survive leadership transitions and audit scrutiny.</span>
+          </li>
+          <li>
+            Vendor &amp; Contract Management
+            <span>Supporting procurement, evaluations, statement-of-work development, and ongoing vendor performance management.</span>
+          </li>
+          <li>
+            Change Enablement for IT Programs
+            <span>Organizational readiness, training strategy, and stakeholder engagement to drive adoption of new systems and processes.</span>
+          </li>
+        </ul>
+
+        <div class="svc-callout">
+          <p>
+            <strong>Ed Wynn served as Chief Information Officer of Florida State Government.</strong>
+            Brian Swords served as Deputy CIO. That is the depth behind every IT engagement Canopy takes on.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 02 · GRANTS MANAGEMENT ========================== -->
+  <section id="grants" class="svc-section svc-section--bone" aria-labelledby="grants-heading">
+    <div class="svc-inner wrap">
+
+      <div class="svc-label fu">
+        <div class="svc-num">02</div>
+        <span class="eyebrow">Service Area</span>
+        <h2 id="grants-heading">Grants Management</h2>
+        <p class="svc-lead">
+          Canopy has managed state and federal grant programs totaling billions of dollars — from FEMA disaster recovery to HUD community development to workforce programs.
+        </p>
+      </div>
+
+      <div class="svc-content fu d1">
+        <h3>From application through closeout — every phase, every requirement.</h3>
+        <p>
+          Grants management is not a side competency at Canopy — it is how several of our principals spent their careers inside Florida state government. We guide clients through the complete grant lifecycle, combining deep regulatory knowledge with hands-on operational experience managing programs at scale.
+        </p>
+
+        <ul class="svc-list">
+          <li>
+            Grant Development &amp; Application Support
+            <span>Structuring proposals, eligibility analysis, narrative development, and submission coordination.</span>
+          </li>
+          <li>
+            Program Design &amp; Subrecipient Management
+            <span>Establishing program structures, subrecipient agreements, monitoring plans, and risk assessments.</span>
+          </li>
+          <li>
+            Financial Management &amp; Drawdowns
+            <span>Setting up compliant accounting structures, managing drawdown schedules, and ensuring allowable cost documentation.</span>
+          </li>
+          <li>
+            Federal &amp; State Reporting
+            <span>SEFA preparation, SF-425 reporting, performance reporting, and all required agency submissions.</span>
+          </li>
+          <li>
+            Monitoring, Audit Readiness &amp; Closeout
+            <span>Internal monitoring, finding remediation, OIG audit response, and complete closeout documentation packages.</span>
+          </li>
+          <li>
+            Grants Management Systems
+            <span>Salesforce-based grants management platform design, implementation, and ongoing support built specifically for government and nonprofit program administrators.</span>
+          </li>
+        </ul>
+
+        <div class="grants-programs">
+          <h4>Programs Our Team Has Managed</h4>
+          <div class="grants-col-wrap">
+            <div class="grants-col">
+              <h5>Federal Programs</h5>
+              <ul>
+                <li>FEMA Public Assistance &amp; Hazard Mitigation</li>
+                <li>HUD Community Development Block Grants (CDBG)</li>
+                <li>U.S. Treasury Homeowner Assistance Program</li>
+                <li>HHS Community Services Block Grant</li>
+                <li>SBA Small Business Credit Initiative</li>
+                <li>DOL Workforce Programs</li>
+              </ul>
+            </div>
+            <div class="grants-col">
+              <h5>Florida State Programs</h5>
+              <ul>
+                <li>First Responders Program</li>
+                <li>Florida Job Growth Grant Fund</li>
+                <li>Florida Emergency Bridge Loan Program</li>
+                <li>Legislature Grant Initiatives</li>
+                <li>FDEM Disaster Recovery (Hurricanes Irma, Michael, Ian)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 03 · FINANCE & REPORTING ======================== -->
+  <section id="finance" class="svc-section svc-section--light" aria-labelledby="finance-heading">
+    <div class="svc-inner wrap">
+
+      <div class="svc-label fu">
+        <div class="svc-num">03</div>
+        <span class="eyebrow">Service Area</span>
+        <h2 id="finance-heading">Finance &amp; Reporting</h2>
+        <p class="svc-lead">
+          Two of our principals served consecutively as Chief Financial Officer of Florida State Government. Finance is not a supporting service line — it is a core practice.
+        </p>
+      </div>
+
+      <div class="svc-content fu d1">
+        <h3>Accurate tracking. Effective reporting. Less burden on your team.</h3>
+        <p>
+          Modern systems are designed to capture financial and operational data — but capturing it and making it work for your organization are two different things. Canopy helps government agencies and nonprofits maximize the value of their financial data, reduce reporting burden, and build the internal controls that survive audits and leadership transitions.
+        </p>
+
+        <ul class="svc-list">
+          <li>Accounting Office Operations Support</li>
+          <li>Budgeting &amp; Cost Allocation</li>
+          <li>Quarterly &amp; Annual Federal and State Financial Reporting</li>
+          <li>Management &amp; Operational Reporting</li>
+          <li>Financial Systems Implementation &amp; Optimization</li>
+          <li>Travel Management</li>
+          <li>Contracts &amp; Grants Management</li>
+          <li>Procurement Support</li>
+          <li>Banking Operations</li>
+          <li>Internal Control &amp; Financial Monitoring</li>
+          <li>Audit Support &amp; Response</li>
+        </ul>
+
+        <div class="svc-callout">
+          <p>
+            <strong>Damon Steffens and William Currie both served as Chief Financial Officer of Florida State Government — in consecutive tenures.</strong>
+            Every finance engagement draws on that combined institutional knowledge.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 04 · ORGANIZATIONAL CHANGE MANAGEMENT =========== -->
+  <section id="ocm" class="svc-section svc-section--dark" aria-labelledby="ocm-heading">
+    <div class="svc-inner wrap">
+
+      <div class="svc-label fu">
+        <div class="svc-num">04</div>
+        <span class="eyebrow eyebrow--light">Service Area</span>
+        <h2 id="ocm-heading">Organizational Change Management</h2>
+        <p class="svc-lead">
+          Change is inevitable. Employee resistance and lost productivity are not. Canopy builds the human infrastructure that makes organizational change actually stick.
+        </p>
+      </div>
+
+      <div class="svc-content fu d1">
+        <h3>The part of transformation most firms skip over.</h3>
+        <p>
+          Technology implementations fail not because the system was wrong, but because the organization was not ready. Canopy has led change management for major IT programs, grants system overhauls, and agency restructuring — from the inside, as the people responsible for the outcome. We know what it takes to bring a workforce through change without losing momentum.
+        </p>
+
+        <ul class="svc-list">
+          <li>
+            Organizational Readiness Assessment
+            <span>Baseline analysis of change capacity, stakeholder alignment, and cultural readiness before transformation begins.</span>
+          </li>
+          <li>
+            Stakeholder Engagement &amp; Communications
+            <span>Structured communication plans, executive alignment sessions, and change champion networks across the organization.</span>
+          </li>
+          <li>
+            Training Strategy &amp; Delivery
+            <span>Role-based training programs, job aids, and knowledge transfer plans designed for government and nonprofit audiences.</span>
+          </li>
+          <li>
+            Process Redesign &amp; Adoption
+            <span>Mapping current-state workflows, identifying gaps, and embedding new processes with measurable adoption milestones.</span>
+          </li>
+          <li>
+            Transition &amp; Sustainment Planning
+            <span>Ensuring changes hold after go-live — with governance structures, performance metrics, and ongoing reinforcement built in.</span>
+          </li>
+        </ul>
+
+        <div class="svc-callout">
+          <p>
+            Change management is embedded in every Canopy engagement — not sold as a separate add-on. When we implement a system or redesign a process, we own the adoption outcome too.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 05 · SALESFORCE ================================= -->
+  <section id="salesforce" class="svc-section svc-section--bone" aria-labelledby="sf-heading">
+    <div class="svc-inner wrap">
+
+      <div class="svc-label fu">
+        <div class="svc-num">05</div>
+        <span class="eyebrow">Service Area</span>
+        <h2 id="sf-heading">Salesforce</h2>
+        <p class="svc-lead">
+          Certified professionals with deep public sector experience — specializing in government CRM, grants management, and Agentforce AI deployment.
+        </p>
+      </div>
+
+      <div class="svc-content fu d1">
+        <h3>The Salesforce partner that has been the government client.</h3>
+        <p>
+          As a trusted Salesforce consulting partner specializing in the public sector, Canopy brings experience in digital transformation, CRM strategy, and cloud solutions for government agencies and nonprofits. Our team does not just implement the platform — we design solutions grounded in how government programs actually operate, including procurement constraints, audit requirements, federal reporting, and real-world user adoption.
+        </p>
+
+        <ul class="svc-list">
+          <li>
+            Salesforce Implementation &amp; Configuration
+            <span>Full-lifecycle implementation across Sales Cloud, Service Cloud, Experience Cloud, and Public Sector Solutions.</span>
+          </li>
+          <li>
+            Grants Management on Salesforce
+            <span>Purpose-built grants management systems for state agencies, nonprofits, and grant-making foundations — including subrecipient portals, reporting dashboards, and audit trail documentation.</span>
+          </li>
+          <li>
+            Agentforce AI Agent Deployment
+            <span>Design and deployment of Agentforce AI agents for public sector use cases — automated intake, eligibility screening, constituent communications, and case routing.</span>
+          </li>
+          <li>
+            CRM Strategy &amp; Constituent Engagement
+            <span>Designing engagement architectures that connect government agencies with constituents, program participants, and stakeholders across channels.</span>
+          </li>
+          <li>
+            Salesforce Health Checks &amp; Optimization
+            <span>Org assessments, technical debt remediation, and performance tuning for agencies with existing Salesforce environments.</span>
+          </li>
+          <li>
+            Training, Adoption &amp; Ongoing Support
+            <span>Admin training, end-user enablement, and managed services to keep your Salesforce investment performing after go-live.</span>
+          </li>
+        </ul>
+
+        <div class="sf-creds">
+          <div class="sf-cred">
+            <div class="sf-cred-val">$8.6B+</div>
+            <div class="sf-cred-lbl">Public Funds Administered on Platforms We've Built</div>
+          </div>
+          <div class="sf-cred">
+            <div class="sf-cred-val">6+</div>
+            <div class="sf-cred-lbl">Florida State Agencies on Salesforce</div>
+          </div>
+          <div class="sf-cred">
+            <div class="sf-cred-val">Early</div>
+            <div class="sf-cred-lbl">Among First Agentforce Deployments in FL Government</div>
+          </div>
+        </div>
+
+        <div class="svc-callout" style="margin-top:2px;">
+          <p>
+            Rebbeca Beers, Managing Director of Salesforce, is 14× Salesforce certified and accredited, with a public sector background and an MBA. She leads every Canopy Salesforce engagement from design through delivery.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW TO BUY ======================================= -->
+  <section id="how-to-buy" aria-labelledby="htb-heading">
+    <div class="htb-inner">
+      <div class="htb-head">
+        <div class="fu">
+          <span class="eyebrow eyebrow--light">Procurement</span>
+          <h2 id="htb-heading">Already have a vehicle? So do we.</h2>
+        </div>
+        <a href="procurement.html" class="arrow-link arrow-link--leaf fu d1">View full contract details</a>
+      </div>
+
+      <div class="htb-contracts">
+
+        <div class="htb-contract fu">
+          <div class="htb-vehicle">GSA Federal Acquisition Service</div>
+          <h3>GSA Multiple Award Schedule</h3>
+          <div class="htb-contract-num">Contract No. 47QRAA23D001H &nbsp;·&nbsp; UEI: TALLQMFBKNR9</div>
+          <p>
+            Governmentwide acquisition vehicle available to federal agencies and authorized state, local, tribal, and educational entities. Covers management consulting, IT professional services, grants management, and cloud computing.
+          </p>
+          <span class="htb-expiry">Active through November 2027</span>
+        </div>
+
+        <div class="htb-contract fu d1">
+          <div class="htb-vehicle">TIPS Interlocal Purchasing System</div>
+          <h3>TIPS Cooperative Contracts</h3>
+          <div class="htb-contract-num">Contracts 240101 &nbsp;·&nbsp; 240403 &nbsp;·&nbsp; 240601</div>
+          <p>
+            Texas-based cooperative serving public sector buyers nationwide — including schools, colleges, municipalities, counties, and nonprofits. Three active awards covering technology solutions, data analytics, and consulting services.
+          </p>
+          <span class="htb-expiry">Active through 2027–2029</span>
+        </div>
+
+        <div class="htb-contract fu d2">
+          <div class="htb-vehicle">Missouri IT State Purchasing</div>
+          <h3>Missouri IT Consulting Contract</h3>
+          <div class="htb-contract-num">Contract No. CT242213022</div>
+          <p>
+            State of Missouri IT consulting contract available to Missouri state departments and eligible public entities. Covers information technology consulting services.
+          </p>
+          <span class="htb-expiry">Active through April 2028</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA ============================================= -->
+  <section id="services-cta" aria-labelledby="cta-heading">
+    <span class="eyebrow eyebrow--light fu">Providing a Clear Path Forward</span>
+    <h2 id="cta-heading" class="fu d1">Ready to talk about your specific challenge?</h2>
+    <p class="fu d2">
+      Every engagement starts with a conversation. Tell us what you are working on — we will tell you honestly whether and how we can help.
+    </p>
+    <div class="cta-btns fu d3">
+      <a href="index.html#contact" class="btn btn-leaf">Talk to Our Team</a>
+      <a href="about.html" class="btn btn-ghost">Meet the Team First</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER ============================================ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logos/logo-wordmark.png" alt="Canopy Management Consulting Group" style="height:56px; width:auto; opacity:0.85; margin-bottom:1rem;">
+        <p>A boutique Salesforce and management consulting firm built for the specific demands of state government, nonprofits, and grants-heavy public sector organizations.</p>
+        <address class="footer-addr">
+          3512 Maclay Blvd S<br>
+          Tallahassee, FL 32312<br>
+          <a href="tel:8503910596">850.391.0596</a><br>
+          <a href="mailto:canopy@cmcgfla.com">canopy@cmcgfla.com</a>
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#profiles">Leadership</a></li>
+          <li><a href="index.html#case-study">Case Studies</a></li>
+          <li><a href="index.html#insights">Insights</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#it-consulting">IT Consulting</a></li>
+          <li><a href="#grants">Grants Management</a></li>
+          <li><a href="#finance">Finance &amp; Reporting</a></li>
+          <li><a href="#ocm">Change Management</a></li>
+          <li><a href="#salesforce">Salesforce</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Work With Us</h4>
+        <ul>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="index.html#serve">Industries Served</a></li>
+        </ul>
+        <ul class="footer-cred-list">
+          <li>GSA Contract Holder</li>
+          <li>47QRAA23D001H</li>
+          <li>Salesforce Partner</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-legal">
+        &copy; 2025 Canopy Management Consulting Group, LLC. All rights reserved.<br>
+        <a href="index.html">Home</a> &middot; <a href="about.html">About</a> &middot; <a href="services.html">Services</a>
+      </p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/company/canopy-management-consulting-group" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Header scroll effect
+  const hdr = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    hdr.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  // Mobile nav toggle
+  const toggle = document.getElementById('nav-toggle');
+  const nav    = document.getElementById('main-nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  nav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+    });
+  });
+
+  // Fade-up on scroll
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); } }),
+    { threshold: 0.12 }
+  );
+  document.querySelectorAll('.fu').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
