@@ -1493,85 +1493,6 @@
       .tc-stage { height: 460px; }
     }
 
-    /* =====================================================
-       INSIGHTS
-    ===================================================== */
-    #insights { background: var(--bone); padding: var(--sp); }
-
-    .ins-head {
-      max-width: var(--mw);
-      margin: 0 auto 3.5rem;
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.25rem;
-    }
-    #insights h2 {
-      font-size: clamp(1.85rem, 3.5vw, 2.7rem);
-      color: var(--midnight);
-      margin-top: 0.6rem;
-    }
-
-    .ins-grid {
-      max-width: var(--mw);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-    }
-
-    .ins-card {
-      background: var(--offwhite);
-      padding: 2.25rem;
-      display: flex;
-      flex-direction: column;
-      transition: background 0.2s;
-    }
-    .ins-card:hover { background: var(--white); }
-
-    .ins-tag {
-      display: inline-block;
-      font-family: var(--font-body);
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      color: var(--sage);
-      background: rgba(115,128,99,0.1);
-      padding: 0.25rem 0.55rem;
-      border-radius: 2px;
-      margin-bottom: 1rem;
-      align-self: flex-start;
-    }
-
-    .ins-card h3 {
-      font-size: 1.08rem;
-      color: var(--midnight);
-      line-height: 1.35;
-      margin-bottom: 0.75rem;
-      flex: 1;
-    }
-
-    .ins-card p {
-      font-size: 0.86rem;
-      color: var(--stone);
-      line-height: 1.67;
-      margin-bottom: 1.5rem;
-    }
-
-    .ins-meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: auto;
-    }
-    .ins-date {
-      font-size: 0.72rem;
-      color: rgba(154,138,123,0.7);
-      font-weight: 600;
-      letter-spacing: 0.05em;
-    }
 
     /* =====================================================
        CONTACT CTA
@@ -1777,7 +1698,6 @@
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
     <a href="#serve">Industries</a>
-    <a href="#insights">Insights</a>
     <a href="is-ai-right-for-me.html">Is AI Right for Me?</a>
     <a href="procurement.html">Procurement</a>
     <a href="careers.html">Careers</a>
@@ -2359,56 +2279,6 @@
     </div>
   </section>
 
-  <!-- INSIGHTS ======================================== -->
-  <section id="insights" aria-labelledby="ins-heading">
-    <div class="ins-head">
-      <div>
-        <span class="eyebrow">Insights &amp; Resources</span>
-        <h2 id="ins-heading" class="fu">Practical perspective from people who have done the work.</h2>
-      </div>
-      <a href="#contact" class="btn btn-dark-outline">View All Resources</a>
-    </div>
-
-    <div class="ins-grid">
-
-      <article class="ins-card fu">
-        <span class="ins-tag">Announcement</span>
-        <h3>Canopy Launches Salesforce Practice</h3>
-        <p>
-          Canopy announced the launch of its Salesforce practice, naming Rebbeca Beers as Managing Director to lead design and implementation for government and nonprofit clients.
-        </p>
-        <div class="ins-meta">
-          <span class="ins-date">Salesforce Practice</span>
-          <a href="https://www.canopymcgroup.com/news/canopy-launches-salesforce-practice" class="arrow-link arrow-link--sage" target="_blank" rel="noopener">Read</a>
-        </div>
-      </article>
-
-      <article class="ins-card fu d1">
-        <span class="ins-tag">Procurement</span>
-        <h3>Canopy Selected as TIPS Awarded Vendor</h3>
-        <p>
-          Canopy earned vendor status through the Interlocal Purchasing System (TIPS), enabling public entities — schools, municipalities, counties, and nonprofits — to contract with us without a standalone competitive bid.
-        </p>
-        <div class="ins-meta">
-          <span class="ins-date">TIPS Cooperative</span>
-          <a href="https://www.canopymcgroup.com/news/canopy-selected-as-awarded-vendor-through-tips" class="arrow-link arrow-link--sage" target="_blank" rel="noopener">Read</a>
-        </div>
-      </article>
-
-      <article class="ins-card fu d2">
-        <span class="ins-tag">Team</span>
-        <h3>Ed Wynn Joins Canopy as Managing Director, IT Consulting</h3>
-        <p>
-          Ed Wynn joined Canopy after serving as Chief Information Officer for a Florida state agency — bringing decades of IT strategy, PMO leadership, and public sector experience to our advisory practice.
-        </p>
-        <div class="ins-meta">
-          <span class="ins-date">New Hire</span>
-          <a href="https://www.canopymcgroup.com/news" class="arrow-link arrow-link--sage" target="_blank" rel="noopener">Read</a>
-        </div>
-      </article>
-
-    </div>
-  </section>
 
   <!-- CONTACT CTA ===================================== -->
   <section id="contact" aria-labelledby="contact-heading">
@@ -2487,7 +2357,6 @@
           <li><a href="about.html">About</a></li>
           <li><a href="#leadership">Leadership</a></li>
           <li><a href="#case-study">Case Studies</a></li>
-          <li><a href="#insights">Insights</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
