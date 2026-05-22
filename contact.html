@@ -755,7 +755,7 @@
         <form
           id="contact-form-el"
           class="contact-form"
-          action="https://formspree.io/f/YOUR_FORM_ID"
+          action="/api/contact"
           method="POST"
           novalidate
           aria-label="Contact form"
@@ -1051,36 +1051,40 @@
 
   if (form) {
     form.addEventListener('submit', function (e) {
-      var action = form.getAttribute('action');
-      // Only intercept if Formspree endpoint is configured
-      if (!action || action.indexOf('YOUR_FORM_ID') !== -1) {
-        // Fallback: open mailto if Formspree not yet connected
-        e.preventDefault();
-        var name    = document.getElementById('name').value;
-        var email   = document.getElementById('email').value;
-        var org     = document.getElementById('org').value;
-        var msg     = document.getElementById('message').value;
-        var body    = 'Name: ' + name + '\nOrganization: ' + org + '\n\n' + msg;
-        window.location.href = 'mailto:canopy@cmcgfla.com?subject=Contact%20from%20' + encodeURIComponent(name) + '&body=' + encodeURIComponent(body);
-        return;
-      }
-
       e.preventDefault();
-      var data = new FormData(form);
-      fetch(action, {
+      var btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      var data = {
+        name:         document.getElementById('name').value,
+        organization: document.getElementById('org').value,
+        title:        document.getElementById('title').value,
+        email:        document.getElementById('email').value,
+        phone:        document.getElementById('phone').value,
+        service:      document.getElementById('service').value,
+        message:      document.getElementById('message').value,
+      };
+
+      fetch('/api/contact', {
         method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      }).then(function (res) {
-        if (res.ok) {
-          form.style.display = 'none';
-          success.style.display = 'block';
-        } else {
-          form.querySelector('button[type="submit"]').textContent = 'Something went wrong — please email us directly.';
-        }
-      }).catch(function () {
-        form.querySelector('button[type="submit"]').textContent = 'Something went wrong — please email us directly.';
-      });
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (json) {
+          if (json.success) {
+            form.style.display = 'none';
+            success.style.display = 'block';
+          } else {
+            btn.textContent = 'Something went wrong — please email us directly.';
+            btn.disabled = false;
+          }
+        })
+        .catch(function () {
+          btn.textContent = 'Something went wrong — please email us directly.';
+          btn.disabled = false;
+        });
     });
   }
 })();
