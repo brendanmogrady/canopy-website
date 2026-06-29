@@ -26,7 +26,10 @@
         { "@type": "EducationalOccupationalCredential", "name": "TIPS Cooperative Contract 240101" },
         { "@type": "EducationalOccupationalCredential", "name": "TIPS Cooperative Contract 240403" },
         { "@type": "EducationalOccupationalCredential", "name": "TIPS Cooperative Contract 240601" },
-        { "@type": "EducationalOccupationalCredential", "name": "Missouri IT Contract CT242213022" }
+        { "@type": "EducationalOccupationalCredential", "name": "Missouri IT Contract CT242213022" },
+        { "@type": "EducationalOccupationalCredential", "name": "Texas DIR DBITS Contract Holder" },
+        { "@type": "EducationalOccupationalCredential", "name": "Florida State Term Contract — IT Staff Augmentation 80101507-23-STC-ITSA" },
+        { "@type": "EducationalOccupationalCredential", "name": "Florida State Term Contract — Management Consulting MC-STC-80101500-20-1" }
       ]
     }
   }
@@ -41,7 +44,7 @@
        TOKENS & RESET
     ===================================================== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 
     :root {
       --midnight: #0E1726;
@@ -485,12 +488,12 @@
       font-family: var(--font-head);
       font-size: 0.9rem;
       font-weight: 700;
-      color: var(--midnight);
+      color: var(--bone);
     }
 
     .tips-award-name {
       font-size: 0.88rem;
-      color: var(--stone);
+      color: rgba(219,211,201,0.72);
       font-weight: 500;
     }
 
@@ -546,19 +549,24 @@
        CONTACT CTA
     ===================================================== */
     #proc-cta {
-      background: var(--sage);
+      background: linear-gradient(150deg, #5f6e47 0%, #2c3720 100%);
       padding: 5.5rem 1.5rem;
       text-align: center;
     }
 
     #proc-cta h2 {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      color: var(--bone);
+      font-size: clamp(2.1rem, 3.8vw, 3.2rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.12;
       margin-bottom: 0.9rem;
-      max-width: 680px;
+      max-width: 720px;
       margin-left: auto;
       margin-right: auto;
+      text-shadow: 0 2px 28px rgba(0,0,0,0.3);
     }
+    #proc-cta h2 em { color: var(--leaf); font-style: normal; }
+    #proc-cta .eyebrow strong { color: var(--bone); }
     #proc-cta p {
       font-size: 0.97rem;
       color: rgba(219,211,201,0.8);
@@ -728,7 +736,7 @@
         Engage Canopy through an <em>existing contract vehicle.</em>
       </h1>
       <p class="hero-sub fu d2">
-        Canopy holds active contracts on GSA MAS, TIPS Cooperative, and Missouri IT Purchasing — giving procurement officers a fast, compliant path to engagement without a new competitive solicitation.
+        Canopy holds active contracts on GSA MAS, TIPS Cooperative, Texas DIR DBITS, Missouri IT Purchasing, and Florida State Term Contracts — giving procurement officers a fast, compliant path to engagement without a new competitive solicitation.
       </p>
 
       <div class="hero-contract-strip fu d3">
@@ -743,9 +751,24 @@
           <span class="hci-active">Active through 2027–2029</span>
         </div>
         <div class="hero-contract-item">
+          <span class="hci-label">Texas DIR DBITS</span>
+          <span class="hci-val">Contract Holder</span>
+          <span class="hci-active">Active</span>
+        </div>
+        <div class="hero-contract-item">
           <span class="hci-label">Missouri IT Purchasing</span>
           <span class="hci-val">CT242213022</span>
           <span class="hci-active">Active through Apr 2028</span>
+        </div>
+        <div class="hero-contract-item">
+          <span class="hci-label">FL State Term — IT Staff Aug</span>
+          <span class="hci-val">80101507-23-STC-ITSA</span>
+          <span class="hci-active">Active</span>
+        </div>
+        <div class="hero-contract-item">
+          <span class="hci-label">FL State Term — Mgmt Consulting</span>
+          <span class="hci-val">MC-STC-80101500-20-1</span>
+          <span class="hci-active">Active</span>
         </div>
       </div>
     </div>
@@ -988,10 +1011,204 @@
     </div>
   </section>
 
+  <!-- TEXAS DIR DBITS ================================= -->
+  <section id="texas-dir" class="contract-section contract-section--light" aria-labelledby="dir-heading">
+    <div class="contract-inner wrap">
+
+      <div class="contract-sidebar fu">
+        <div class="contract-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <span class="eyebrow">Contract Vehicle 04</span>
+        <h2 id="dir-heading">Texas DIR — DBITS</h2>
+        <p>Deliverables-Based Information Technology Services through the Texas Department of Information Resources — a pre-competed vehicle for Texas public sector buyers.</p>
+
+        <div class="contract-meta">
+          <div class="meta-row">
+            <span class="meta-label">Program</span>
+            <span class="meta-val">DIR DBITS</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Contract Number</span>
+            <span class="meta-val">[DIR contract no. — confirm]</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Issuing Authority</span>
+            <span class="meta-val">Texas Department of Information Resources</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contract-body fu d1">
+        <h3>A streamlined path for Texas IT services procurement.</h3>
+        <p>
+          The Texas DIR DBITS program lets state agencies, local governments, and other eligible Texas entities procure deliverables-based IT services through DIR's competitively awarded contracts — without running a separate solicitation. As a DBITS contract holder, Canopy delivers its technology and consulting practice to Texas buyers through this established vehicle.
+        </p>
+
+        <h4>Covered Services</h4>
+        <div class="eligible-list">
+          <div class="eligible-item">IT Assessments &amp; Planning</div>
+          <div class="eligible-item">Project &amp; Program Management</div>
+          <div class="eligible-item">Enterprise Systems Implementation</div>
+          <div class="eligible-item">Salesforce Implementation &amp; Support</div>
+          <div class="eligible-item">Technology Consulting</div>
+          <div class="eligible-item">Organizational Change Management</div>
+        </div>
+
+        <h4>Eligible Ordering Organizations</h4>
+        <div class="eligible-list">
+          <div class="eligible-item">Texas State Agencies</div>
+          <div class="eligible-item">Local Governments</div>
+          <div class="eligible-item">Public Education &amp; Higher Ed</div>
+          <div class="eligible-item">Other DIR-Eligible Entities</div>
+        </div>
+
+        <div class="ordering-box">
+          <div class="ordering-box-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l.95-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+          </div>
+          <div>
+            <h4>Ordering through DIR</h4>
+            <p>Texas DIR-eligible entities can engage Canopy through our DBITS contract. Contact us at <a href="mailto:canopy@cmcgfla.com" style="color:var(--leaf)">canopy@cmcgfla.com</a> and we will coordinate the DBITS deliverables-based statement of work with your procurement office.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FLORIDA STATE TERM — IT STAFF AUGMENTATION ======= -->
+  <section id="fl-itsa" class="contract-section contract-section--dark" aria-labelledby="itsa-heading">
+    <div class="contract-inner wrap">
+
+      <div class="contract-sidebar fu">
+        <div class="contract-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <span class="eyebrow eyebrow--light">Contract Vehicle 05</span>
+        <h2 id="itsa-heading">Florida State Term — IT Staff Augmentation</h2>
+        <p>A Florida State Term Contract for information technology staff augmentation, available to Florida state agencies and eligible users.</p>
+
+        <div class="contract-meta">
+          <div class="meta-row">
+            <span class="meta-label">Contract Number</span>
+            <span class="meta-val">80101507-23-STC-ITSA</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Category</span>
+            <span class="meta-val">IT Staff Augmentation Services</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Issuing Authority</span>
+            <span class="meta-val">Florida Dept. of Management Services — State Purchasing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contract-body fu d1">
+        <h3>Qualified IT talent for Florida agencies — pre-competed and ready.</h3>
+        <p>
+          The State Term Contract for IT Staff Augmentation gives Florida state agencies and eligible local governments a compliant way to engage qualified technology professionals without a standalone procurement. Canopy supplies experienced staff across project management, systems implementation, and platform support.
+        </p>
+
+        <h4>Representative Roles</h4>
+        <div class="eligible-list">
+          <div class="eligible-item">Project &amp; Program Managers</div>
+          <div class="eligible-item">Business &amp; Systems Analysts</div>
+          <div class="eligible-item">Salesforce Consultants &amp; Admins</div>
+          <div class="eligible-item">Solution &amp; Technical Architects</div>
+          <div class="eligible-item">Change &amp; Training Specialists</div>
+          <div class="eligible-item">Grants &amp; Financial Systems Staff</div>
+        </div>
+
+        <h4>Eligible Organizations</h4>
+        <div class="eligible-list">
+          <div class="eligible-item">Florida State Agencies</div>
+          <div class="eligible-item">Eligible Local Governments &amp; Users</div>
+        </div>
+
+        <div class="ordering-box">
+          <div class="ordering-box-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l.95-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+          </div>
+          <div>
+            <h4>Placing an order</h4>
+            <p>Florida agencies can reference contract 80101507-23-STC-ITSA when initiating an engagement. Contact us at <a href="mailto:canopy@cmcgfla.com" style="color:var(--leaf)">canopy@cmcgfla.com</a> and we will coordinate with your procurement office.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FLORIDA STATE TERM — MANAGEMENT CONSULTING ======= -->
+  <section id="fl-mgmt" class="contract-section contract-section--bone" aria-labelledby="flmc-heading">
+    <div class="contract-inner wrap">
+
+      <div class="contract-sidebar fu">
+        <div class="contract-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+        </div>
+        <span class="eyebrow">Contract Vehicle 06</span>
+        <h2 id="flmc-heading">Florida State Term — Management Consulting</h2>
+        <p>A Florida State Term Contract for management consulting services, available to Florida state agencies and eligible users.</p>
+
+        <div class="contract-meta">
+          <div class="meta-row">
+            <span class="meta-label">Contract Number</span>
+            <span class="meta-val">MC-STC-80101500-20-1</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Category</span>
+            <span class="meta-val">Management Consulting Services</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Issuing Authority</span>
+            <span class="meta-val">Florida Dept. of Management Services — State Purchasing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contract-body fu d1">
+        <h3>Management consulting for Florida government — without a new RFP.</h3>
+        <p>
+          The State Term Contract for Management Consulting lets Florida agencies engage Canopy for the management, financial, and program advisory work at the core of our practice — strategy, organizational improvement, grants and financial operations, and project oversight — through a pre-competed vehicle.
+        </p>
+
+        <h4>Covered Services</h4>
+        <div class="eligible-list">
+          <div class="eligible-item">Management &amp; Organizational Consulting</div>
+          <div class="eligible-item">Financial &amp; Accounting Operations</div>
+          <div class="eligible-item">Grants Management Advisory</div>
+          <div class="eligible-item">Project &amp; Program Management</div>
+          <div class="eligible-item">Process Improvement</div>
+          <div class="eligible-item">Organizational Change Management</div>
+        </div>
+
+        <h4>Eligible Organizations</h4>
+        <div class="eligible-list">
+          <div class="eligible-item">Florida State Agencies</div>
+          <div class="eligible-item">Eligible Local Governments &amp; Users</div>
+        </div>
+
+        <div class="ordering-box">
+          <div class="ordering-box-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l.95-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.02z"/></svg>
+          </div>
+          <div>
+            <h4>Placing an order</h4>
+            <p>Florida agencies can reference contract MC-STC-80101500-20-1 when initiating an engagement. Contact us at <a href="mailto:canopy@cmcgfla.com" style="color:var(--leaf)">canopy@cmcgfla.com</a> and we will coordinate with your procurement office.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- CTA ============================================= -->
   <section id="proc-cta" aria-labelledby="proc-cta-heading">
-    <span class="eyebrow eyebrow--light fu">Providing a Clear Path Forward</span>
-    <h2 id="proc-cta-heading" class="fu d1">Not sure which vehicle fits your situation?</h2>
+    <span class="eyebrow eyebrow--light fu">Providing a Clear Path <strong>Forward.</strong></span>
+    <h2 id="proc-cta-heading" class="fu d1">Not sure which <em>vehicle</em> fits your situation?</h2>
     <p class="fu d2">
       Our team works with procurement officers regularly. Tell us your organization type and location — we will identify the fastest compliant path to engagement.
     </p>
@@ -1032,7 +1249,7 @@
         <ul>
           <li><a href="services.html#salesforce">Salesforce</a></li>
           <li><a href="services.html#grants">Grants Management</a></li>
-          <li><a href="services.html#finance">Finance &amp; Reporting</a></li>
+          <li><a href="services.html#finance">Finance &amp; Accounting</a></li>
           <li><a href="services.html#it-consulting">IT Consulting</a></li>
           <li><a href="services.html#ocm">Change Management</a></li>
         </ul>
@@ -1043,7 +1260,10 @@
         <ul>
           <li><a href="#gsa">GSA MAS — 47QRAA23D001H</a></li>
           <li><a href="#tips">TIPS Cooperative</a></li>
+          <li><a href="#texas-dir">Texas DIR DBITS</a></li>
           <li><a href="#missouri">Missouri IT Contract</a></li>
+          <li><a href="#fl-itsa">FL State Term — IT Staff Aug</a></li>
+          <li><a href="#fl-mgmt">FL State Term — Mgmt Consulting</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
         <ul class="footer-cred-list">

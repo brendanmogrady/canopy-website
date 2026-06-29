@@ -43,7 +43,7 @@
        TOKENS & RESET
     ===================================================== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 130px; }
 
     :root {
       --midnight: #0E1726;
@@ -522,19 +522,24 @@
        CTA
     ===================================================== */
     #services-cta {
-      background: var(--sage);
+      background: linear-gradient(150deg, #5f6e47 0%, #2c3720 100%);
       padding: 5.5rem 1.5rem;
       text-align: center;
     }
 
     #services-cta h2 {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      color: var(--bone);
+      font-size: clamp(2.1rem, 3.8vw, 3.2rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.12;
       margin-bottom: 0.9rem;
-      max-width: 700px;
+      max-width: 720px;
       margin-left: auto;
       margin-right: auto;
+      text-shadow: 0 2px 28px rgba(0,0,0,0.3);
     }
+    #services-cta h2 em { color: var(--leaf); font-style: normal; }
+    #services-cta .eyebrow strong { color: var(--bone); }
     #services-cta p {
       font-size: 0.97rem;
       color: rgba(219,211,201,0.8);
@@ -816,7 +821,7 @@
     <div class="service-nav-inner">
       <a href="#it-consulting"><span class="sn-num">01</span> IT Consulting</a>
       <a href="#grants"><span class="sn-num">02</span> Grants Management</a>
-      <a href="#finance"><span class="sn-num">03</span> Finance &amp; Reporting</a>
+      <a href="#finance"><span class="sn-num">03</span> Finance &amp; Accounting</a>
       <a href="#ocm"><span class="sn-num">04</span> Change Management</a>
       <a href="#salesforce"><span class="sn-num">05</span> Salesforce</a>
     </div>
@@ -870,7 +875,7 @@
 
         <div class="svc-callout">
           <p>
-            <strong>Ed Wynn served as Chief Information Officer of Florida State Government.</strong>
+            <strong>Ed Wynn served as Chief Information Officer of a large Florida state agency.</strong>
             Brian Swords served as Deputy CIO. That is the depth behind every IT engagement Canopy takes on.
           </p>
         </div>
@@ -963,9 +968,9 @@
       <div class="svc-label fu">
         <div class="svc-num">03</div>
         <span class="eyebrow">Service Area</span>
-        <h2 id="finance-heading">Finance &amp; Reporting</h2>
+        <h2 id="finance-heading">Finance &amp; Accounting</h2>
         <p class="svc-lead">
-          Two of our principals served consecutively as Chief Financial Officer of Florida State Government. Finance is not a supporting service line — it is a core practice.
+          Two of our principals served consecutively as Chief Financial Officer of a large Florida state agency. Finance is not a supporting service line — it is a core practice.
         </p>
       </div>
 
@@ -977,6 +982,8 @@
 
         <ul class="svc-list">
           <li>Accounting Office Operations Support</li>
+          <li>Florida PALM Transition Support</li>
+          <li>Project Management &amp; PMO Support</li>
           <li>Budgeting &amp; Cost Allocation</li>
           <li>Quarterly &amp; Annual Federal and State Financial Reporting</li>
           <li>Management &amp; Operational Reporting</li>
@@ -991,7 +998,7 @@
 
         <div class="svc-callout">
           <p>
-            <strong>Damon Steffens and William Currie both served as Chief Financial Officer of Florida State Government — in consecutive tenures.</strong>
+            <strong>Damon Steffens and William Currie both served as Chief Financial Officer of a large Florida state agency — in consecutive tenures.</strong>
             Every finance engagement draws on that combined institutional knowledge.
           </p>
         </div>
@@ -1172,8 +1179,8 @@
 
   <!-- CTA ============================================= -->
   <section id="services-cta" aria-labelledby="cta-heading">
-    <span class="eyebrow eyebrow--light fu">Providing a Clear Path Forward</span>
-    <h2 id="cta-heading" class="fu d1">Ready to talk about your specific challenge?</h2>
+    <span class="eyebrow eyebrow--light fu">Providing a Clear Path <strong>Forward.</strong></span>
+    <h2 id="cta-heading" class="fu d1">Ready to talk about your <em>specific challenge?</em></h2>
     <p class="fu d2">
       Every engagement starts with a conversation. Tell us what you are working on — we will tell you honestly whether and how we can help.
     </p>
@@ -1214,7 +1221,7 @@
         <ul>
           <li><a href="#it-consulting">IT Consulting</a></li>
           <li><a href="#grants">Grants Management</a></li>
-          <li><a href="#finance">Finance &amp; Reporting</a></li>
+          <li><a href="#finance">Finance &amp; Accounting</a></li>
           <li><a href="#ocm">Change Management</a></li>
           <li><a href="#salesforce">Salesforce</a></li>
         </ul>

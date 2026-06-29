@@ -99,7 +99,7 @@
        TOKENS & RESET
     ===================================================== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 90px; }
 
     :root {
       --midnight: #0E1726;
@@ -502,8 +502,8 @@
 
     .hero-cred-bar {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 2.5rem;
+      flex-direction: column;
+      gap: 0.65rem;
       padding-top: 2rem;
       border-top: 1px solid rgba(219,211,201,0.15);
     }
@@ -517,6 +517,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: rgba(219,211,201,0.52);
+      white-space: nowrap;
     }
     .hero-cred-item::before {
       content: '';
@@ -1701,7 +1702,7 @@
       .lead-grid-featured   { grid-template-columns: 1fr 1fr; }
       .lead-grid-supporting { grid-template-columns: 1fr 1fr; }
       .cs-metrics { grid-template-columns: repeat(3, 1fr); }
-      .hero-cred-bar { flex-direction: column; gap: 0.6rem; }
+      .hero-cred-bar { gap: 0.55rem; }
       .cred-clients  { gap: 3rem; }
     }
 
@@ -1759,14 +1760,14 @@
     </div>
 
     <div class="hero-inner">
-      <div class="hero-eyebrow fu">Salesforce Implementation Ready Partner</div>
+      <div class="hero-eyebrow fu">Management &amp; Technology Consulting</div>
 
-      <h1 class="fu d1">Built by former state CIOs and CFOs.<br>Shipping the first generation of government AI agents.</h1>
+      <h1 class="fu d1">Built by former state CIOs&nbsp;and&nbsp;CFOs.<br>Shipping the first generation of government AI&nbsp;agents.</h1>
 
       <p class="hero-tagline fu d2">Providing a clear path <strong>forward.</strong></p>
 
       <p class="hero-sub fu d3">
-        Salesforce and Agentforce implementations for state, local, and nonprofit organizations — by people who ran government before they consulted to it.
+        Salesforce, AI, finance, and IT consulting for government, nonprofit, and private-sector organizations — delivered by a team of expert human agents who ran the enterprise before they consulted to it.
       </p>
 
       <div class="hero-ctas fu d4">
@@ -1775,13 +1776,10 @@
       </div>
 
       <div class="hero-cred-bar fu d5">
-        <span class="hero-cred-item">GSA Schedule Holder</span>
-        <span class="hero-cred-item">TIPS Awarded Vendor</span>
-        <span class="hero-cred-item hero-cred-item--sf">
-          <img src="images/logos/logo-salesforce.svg" alt="" aria-hidden="true" class="hero-sf-logo">
-          Salesforce Implementation Ready Partner
-        </span>
-        <span class="hero-cred-item">Tallahassee, Florida</span>
+        <span class="hero-cred-item">Salesforce Implementation Ready Partner</span>
+        <span class="hero-cred-item">Accounting Operations Partner</span>
+        <span class="hero-cred-item">Certified Project Management Partner</span>
+        <span class="hero-cred-item">IT Operational Support Partner</span>
       </div>
     </div>
 
@@ -1802,7 +1800,7 @@
       <div class="qn-pills">
         <a href="services.html#salesforce" class="qn-pill">Salesforce &amp; Agentforce</a>
         <a href="services.html#grants"     class="qn-pill">Grants Management</a>
-        <a href="services.html#finance"    class="qn-pill">Finance &amp; Reporting</a>
+        <a href="services.html#finance"    class="qn-pill">Finance &amp; Accounting</a>
         <a href="services.html#it-consulting" class="qn-pill">IT Consulting</a>
         <a href="services.html#ocm"        class="qn-pill">Change Management</a>
         <a href="is-ai-right-for-me.html"  class="qn-pill qn-pill--ai">Is AI right for me? →</a>
@@ -1837,7 +1835,7 @@
             <img src="images/logos/logo-flprepaid.png" alt="Florida Prepaid" class="client-logo-img">
           </div>
           <div class="client-mark">
-            <img src="images/logos/logo-fl-commerce.png" alt="Florida State Government" class="client-logo-img client-logo-lg">
+            <img src="images/logos/logo-fl-commerce.png" alt="Florida Commerce" class="client-logo-img client-logo-lg">
           </div>
 
           <!-- duplicate set — makes the loop seamless -->
@@ -1890,7 +1888,7 @@
           <div class="badge-icon-wrap" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2C6.477 2 2 5.8 2 11s4.477 9 9 9 9-4.477 9-9-4.032-9-9-9z" stroke="#83AD36" stroke-width="1.4"/><path d="M11 6v5l3 2" stroke="#83AD36" stroke-width="1.4" stroke-linecap="round"/></svg>
           </div>
-          Florida&#8209;Based, Public Sector Focused
+          Florida&#8209;Based · Public &amp; Private Sector
         </div>
 
       </div>
@@ -1915,9 +1913,9 @@
           That changes every conversation about scope, timeline, and what is actually possible.
         </p>
         <ul class="diff-list" aria-label="Leadership credentials">
-          <li>CEO — Former CFO, Florida State Government</li>
-          <li>CTO — Former CIO, Florida State Government</li>
-          <li>COO — Former Deputy CIO, Florida State Government</li>
+          <li>CEO — Former CFO of a large Florida state agency</li>
+          <li>CTO — Former CIO of a large Florida state agency</li>
+          <li>COO — Former Deputy CIO of a large Florida state agency</li>
           <li>Senior Leadership — Former Deputy Secretary roles, State of Florida</li>
         </ul>
         <a href="about.html" class="arrow-link arrow-link--sage">Meet the team</a>
@@ -2010,9 +2008,9 @@
           <rect x="28" y="10" width="6" height="26" rx="1" fill="#83AD36"/>
           <line x1="4" y1="36" x2="36" y2="36" stroke="#738063" stroke-width="1.2" stroke-linecap="round"/>
         </svg>
-        <h3>Finance &amp; Reporting</h3>
+        <h3>Finance &amp; Accounting</h3>
         <p class="svc-outcome">
-          "Budget-to-actuals visibility, legislative reporting, and audit-ready financials for agencies and foundations that cannot afford surprises."
+          "Accounting operations, Florida PALM transition support, budget-to-actuals visibility, and audit-ready financials for organizations that cannot afford surprises."
         </p>
         <a href="contact.html" class="arrow-link arrow-link--leaf">Learn more</a>
       </article>
@@ -2055,6 +2053,7 @@
     <div class="serve-head wrap">
       <span class="eyebrow">Who We Serve</span>
       <h2 id="serve-heading" class="fu">Built for the organizations where the work is hardest.</h2>
+      <p class="lead-intro fu d1">Our roots are in government and the nonprofits that work alongside it — but the same discipline in Salesforce, AI, finance, and IT delivery serves private-sector organizations that demand accountability and results.</p>
     </div>
 
     <div class="serve-grid fu d1">
@@ -2283,12 +2282,12 @@
 
       <!-- Bio detail strip -->
       <div class="tc-detail" id="tc-detail" aria-live="polite" aria-atomic="true">
-        <div class="tc-detail-inner" data-for="0"><p class="tc-detail-prior">Former Chief Financial Officer, Florida State Government — finance, budget, procurement, contracts, grants, and compliance.</p></div>
-        <div class="tc-detail-inner" data-for="1"><p class="tc-detail-prior">Former Deputy Chief Information Officer, Florida State Government — IT strategy, change management, and enterprise adoption.</p></div>
-        <div class="tc-detail-inner" data-for="2"><p class="tc-detail-prior">Former Chief Information Officer, Florida State Government — CIO, PMO director, and technology strategist with deep Salesforce experience.</p></div>
-        <div class="tc-detail-inner" data-for="3"><p class="tc-detail-prior">Former Chief of IT Strategic Business Support, Florida State Government — project management and federal grant systems specialist.</p></div>
-        <div class="tc-detail-inner" data-for="4"><p class="tc-detail-prior">Former Chief Financial Officer, Florida State Government — finance, accounting, budget, procurement, and federal grant management.</p></div>
-        <div class="tc-detail-inner" data-for="5"><p class="tc-detail-prior">Former Chief of Financial Management, Florida State Government — grants management, federal reporting, and financial compliance.</p></div>
+        <div class="tc-detail-inner" data-for="0"><p class="tc-detail-prior">Former Chief Financial Officer of a large Florida state agency — finance, budget, procurement, contracts, grants, and compliance.</p></div>
+        <div class="tc-detail-inner" data-for="1"><p class="tc-detail-prior">Former Deputy Chief Information Officer of a large Florida state agency — IT strategy, change management, and enterprise adoption.</p></div>
+        <div class="tc-detail-inner" data-for="2"><p class="tc-detail-prior">Former Chief Information Officer of a large Florida state agency — CIO, PMO director, and technology strategist with deep Salesforce experience.</p></div>
+        <div class="tc-detail-inner" data-for="3"><p class="tc-detail-prior">Former Chief of IT Strategic Business Support at a large Florida state agency — project management and federal grant systems specialist.</p></div>
+        <div class="tc-detail-inner" data-for="4"><p class="tc-detail-prior">Former Chief Financial Officer of a large Florida state agency — finance, accounting, budget, procurement, and federal grant management.</p></div>
+        <div class="tc-detail-inner" data-for="5"><p class="tc-detail-prior">Former Chief of Financial Management at a large Florida state agency — grants management, federal reporting, and financial compliance.</p></div>
         <div class="tc-detail-inner" data-for="6"><p class="tc-detail-prior">14× Salesforce Certified &amp; Accredited | MBA — Salesforce architect passionate about technology that serves public sector communities.</p></div>
       </div>
 
@@ -2362,7 +2361,7 @@
         <ul>
           <li><a href="services.html#salesforce">Salesforce &amp; Agentforce</a></li>
           <li><a href="services.html#grants">Grants Management</a></li>
-          <li><a href="services.html#finance">Finance &amp; Reporting</a></li>
+          <li><a href="services.html#finance">Finance &amp; Accounting</a></li>
           <li><a href="services.html#it-consulting">IT Consulting</a></li>
           <li><a href="services.html#ocm">Change Management</a></li>
         </ul>
@@ -2373,8 +2372,8 @@
         <ul>
           <li><a href="#serve">State Government</a></li>
           <li><a href="#serve">Local Government</a></li>
-          <li><a href="#serve">Nonprofits</a></li>
-          <li><a href="#serve">Foundations</a></li>
+          <li><a href="#serve">Nonprofits &amp; Foundations</a></li>
+          <li><a href="#serve">Private Sector</a></li>
           <li><a href="#serve">Emergency Management</a></li>
         </ul>
       </div>

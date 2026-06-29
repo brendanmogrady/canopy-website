@@ -37,7 +37,12 @@
       "Bash(mv \"images/Damon Brick Headshot.jpg\" images/team/damon-steffens.jpg)",
       "Bash(mv \"images/Brian Brick Headshot.jpg\" images/team/brian-swords.jpg)",
       "Bash(mv \"images/Ed Brick Headshot.jpg\" images/team/ed-wynn.jpg)",
-      "Bash(mv \"images/Will Brick Headshot.jpg\" images/team/will-currie.jpg)"
+      "Bash(mv \"images/Will Brick Headshot.jpg\" images/team/will-currie.jpg)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\brend\\\\canopy-website\" -Recurse | Where-Object { !$_.PSIsContainer } | Select-Object FullName)",
+      "WebFetch(domain:cmcgfla.com)",
+      "WebFetch(domain:www.cmcgfla.com)",
+      "WebSearch",
+      "Bash(curl *)"
     ]
   }
 }
