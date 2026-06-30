@@ -381,7 +381,7 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: safe center;
       max-width: var(--mw);
       width: 100%;
       margin: 0 auto;
@@ -502,8 +502,10 @@
 
     .hero-cred-bar {
       display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6rem 1.6rem;
       padding-top: 2rem;
       border-top: 1px solid rgba(219,211,201,0.15);
     }
@@ -675,6 +677,12 @@
       display: block;
     }
     .client-logo-lg { height: 52px; max-width: 240px; }
+
+    /* Partner logos — uniform sizing across the strip.
+       Wordmarks share one height; square seals run slightly smaller
+       so their denser shape doesn't optically overpower the row. */
+    .client-logo-img.is-wm   { height: 34px; max-width: 230px; }
+    .client-logo-img.is-seal { height: 30px; max-width: 60px; }
 
     /* Text marks for agencies where logo isn't available */
     .client-abbr {
@@ -1811,7 +1819,7 @@
   <!-- CREDIBILITY STRIP =============================== -->
   <div id="credibility" role="region" aria-label="Clients and credentials">
     <div class="cred-inner">
-      <p class="cred-label">Florida agencies and organizations we have served</p>
+      <p class="cred-label">Agencies and organizations we have served</p>
 
       <div class="cred-clients-wrap" aria-hidden="false">
         <div class="cred-clients" aria-label="Client logos">
@@ -1837,6 +1845,33 @@
           <div class="client-mark">
             <img src="images/logos/logo-fl-commerce.png" alt="Florida Commerce" class="client-logo-img client-logo-lg">
           </div>
+          <div class="client-mark">
+            <img src="images/logos/logo-dbpr.png" alt="Florida Department of Business &amp; Professional Regulation" class="client-logo-img is-wm">
+          </div>
+          <div class="client-mark">
+            <img src="images/logos/logo-odjfs.png" alt="Ohio Department of Job &amp; Family Services" class="client-logo-img is-wm">
+          </div>
+          <div class="client-mark">
+            <img src="images/logos/logo-oig.png" alt="Florida Inspectors General" class="client-logo-img is-seal">
+          </div>
+          <div class="client-mark">
+            <img src="images/logos/logo-kidcare.png" alt="Florida KidCare" class="client-logo-img is-wm">
+          </div>
+          <div class="client-mark">
+            <img src="images/logos/logo-fdoh.svg" alt="Florida Department of Health" class="client-logo-img is-wm">
+          </div>
+          <div class="client-mark">
+            <img src="images/logos/logo-fwc.png" alt="Florida Fish &amp; Wildlife Conservation Commission" class="client-logo-img is-seal">
+          </div>
+          <div class="client-mark">
+            <img src="images/logos/logo-fdc.png" alt="Florida Department of Corrections" class="client-logo-img is-seal">
+          </div>
+          <div class="client-mark">
+            <img src="images/logos/logo-cfx.png" alt="Central Florida Expressway Authority" class="client-logo-img is-wm">
+          </div>
+          <div class="client-mark">
+            <img src="images/logos/logo-careersource.png" alt="CareerSource Florida" class="client-logo-img is-wm">
+          </div>
 
           <!-- duplicate set — makes the loop seamless -->
           <div class="client-mark" aria-hidden="true">
@@ -1858,6 +1893,33 @@
           </div>
           <div class="client-mark" aria-hidden="true">
             <img src="images/logos/logo-fl-commerce.png" alt="" class="client-logo-img">
+          </div>
+          <div class="client-mark" aria-hidden="true">
+            <img src="images/logos/logo-dbpr.png" alt="" class="client-logo-img is-wm">
+          </div>
+          <div class="client-mark" aria-hidden="true">
+            <img src="images/logos/logo-odjfs.png" alt="" class="client-logo-img is-wm">
+          </div>
+          <div class="client-mark" aria-hidden="true">
+            <img src="images/logos/logo-oig.png" alt="" class="client-logo-img is-seal">
+          </div>
+          <div class="client-mark" aria-hidden="true">
+            <img src="images/logos/logo-kidcare.png" alt="" class="client-logo-img is-wm">
+          </div>
+          <div class="client-mark" aria-hidden="true">
+            <img src="images/logos/logo-fdoh.svg" alt="" class="client-logo-img is-wm">
+          </div>
+          <div class="client-mark" aria-hidden="true">
+            <img src="images/logos/logo-fwc.png" alt="" class="client-logo-img is-seal">
+          </div>
+          <div class="client-mark" aria-hidden="true">
+            <img src="images/logos/logo-fdc.png" alt="" class="client-logo-img is-seal">
+          </div>
+          <div class="client-mark" aria-hidden="true">
+            <img src="images/logos/logo-cfx.png" alt="" class="client-logo-img is-wm">
+          </div>
+          <div class="client-mark" aria-hidden="true">
+            <img src="images/logos/logo-careersource.png" alt="" class="client-logo-img is-wm">
           </div>
 
         </div>
