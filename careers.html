@@ -677,6 +677,7 @@
       margin-bottom: 0.75rem;
     }
     .job-apply-panel .apply-btn:hover { background: #C97A0D; }
+    button.apply-btn { border: none; cursor: pointer; width: 100%; font: inherit; }
 
     .job-apply-panel .apply-note {
       font-size: 0.72rem;
@@ -852,6 +853,185 @@
     @media (max-width: 480px) {
       .job-card-header { padding: 1.25rem; }
       .job-card-body   { padding: 0 1.25rem 1.5rem; }
+    }
+    /* ── Apply modal ─────────────────────────────────── */
+    .apply-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 4vh 1.25rem;
+      overflow-y: auto;
+    }
+    .apply-modal[hidden] { display: none; }
+    .apply-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(14,23,38,0.72);
+      backdrop-filter: blur(2px);
+    }
+    .apply-modal-card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 620px;
+      background: var(--white);
+      border-radius: 6px;
+      padding: 2.5rem 2.5rem 2.75rem;
+      box-shadow: 0 24px 70px rgba(14,23,38,0.4);
+      margin: auto;
+    }
+    .apply-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 36px;
+      height: 36px;
+      border: none;
+      background: rgba(14,23,38,0.06);
+      border-radius: 50%;
+      font-size: 1.4rem;
+      line-height: 1;
+      color: var(--midnight);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .apply-modal-close:hover { background: rgba(14,23,38,0.12); }
+    .apply-modal-card h2 {
+      font-size: 1.65rem;
+      color: var(--midnight);
+      margin: 0.4rem 0 0.35rem;
+      letter-spacing: -0.01em;
+    }
+    .apply-for {
+      font-size: 0.9rem;
+      color: var(--stone);
+      margin-bottom: 1.6rem;
+    }
+    .apply-for strong { color: var(--leaf); }
+
+    /* Form (scoped to the modal) */
+    .apply-modal .apply-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+    }
+    .apply-modal .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.15rem;
+    }
+    .apply-modal .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .apply-modal .form-field label {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--midnight);
+    }
+    .apply-modal .form-field label .req { color: var(--leaf); margin-left: 2px; }
+    .apply-modal .form-field input,
+    .apply-modal .form-field select,
+    .apply-modal .form-field textarea {
+      font-family: var(--font-body);
+      font-size: 0.93rem;
+      color: var(--midnight);
+      background: var(--bone);
+      border: 1.5px solid rgba(14,23,38,0.14);
+      border-radius: 3px;
+      padding: 0.7rem 0.9rem;
+      transition: border-color 0.2s, background 0.2s;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      width: 100%;
+    }
+    .apply-modal .form-field select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239A8A7B' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.9rem center;
+      padding-right: 2.4rem;
+    }
+    .apply-modal .form-field input:focus,
+    .apply-modal .form-field select:focus,
+    .apply-modal .form-field textarea:focus {
+      border-color: var(--leaf);
+      background: var(--white);
+    }
+    .apply-modal .form-field textarea {
+      resize: vertical;
+      min-height: 100px;
+      line-height: 1.6;
+    }
+    .apply-modal .form-field input[type="file"] {
+      padding: 0.55rem 0.9rem;
+      font-size: 0.85rem;
+    }
+    .apply-modal .field-hint {
+      font-size: 0.72rem;
+      color: rgba(107,92,80,0.8);
+    }
+    .apply-modal .form-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 0.4rem;
+    }
+    .apply-modal .form-note {
+      font-size: 0.76rem;
+      color: rgba(107,92,80,0.85);
+      line-height: 1.5;
+    }
+    .apply-modal .form-footer .btn-leaf {
+      background: #E8921A;
+      color: var(--midnight);
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.6rem;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .apply-modal .form-footer .btn-leaf:hover { background: #C97A0D; }
+    .apply-modal .form-footer .btn-leaf:disabled { opacity: 0.65; cursor: default; }
+    .apply-modal .apply-success {
+      display: none;
+      background: rgba(131,173,54,0.09);
+      border: 1.5px solid rgba(131,173,54,0.35);
+      border-radius: 3px;
+      padding: 1.5rem 1.75rem;
+      text-align: center;
+    }
+    .apply-modal .apply-success p {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--midnight);
+      line-height: 1.6;
+    }
+    .apply-modal .apply-success p span {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--stone);
+      margin-top: 0.4rem;
+    }
+    @media (max-width: 560px) {
+      .apply-modal .form-row { grid-template-columns: 1fr; }
+      .apply-modal-card { padding: 2rem 1.4rem 2.25rem; }
     }
   </style>
 </head>
@@ -1081,7 +1261,7 @@
               </div>
               <div class="job-apply-panel">
                 <p>Send your resume and a brief note about the type of work you're looking for.</p>
-                <a href="mailto:careers@cmcgfla.com?subject=Application%20%E2%80%94%20Project%20Manager" class="apply-btn">Apply via Email</a>
+                <button type="button" class="apply-btn" data-apply data-position="Project Manager">Apply Now</button>
                 <p class="apply-note">Full position description available on request.</p>
               </div>
             </div>
@@ -1126,7 +1306,7 @@
               </div>
               <div class="job-apply-panel">
                 <p>Send your resume and a brief note about the type of work you're looking for.</p>
-                <a href="mailto:careers@cmcgfla.com?subject=Application%20%E2%80%94%20Project%20Coordinator" class="apply-btn">Apply via Email</a>
+                <button type="button" class="apply-btn" data-apply data-position="Project Coordinator">Apply Now</button>
                 <p class="apply-note">Full position description available on request.</p>
               </div>
             </div>
@@ -1172,7 +1352,7 @@
               </div>
               <div class="job-apply-panel">
                 <p>Send your resume and a brief note about the type of work you're looking for.</p>
-                <a href="mailto:careers@cmcgfla.com?subject=Application%20%E2%80%94%20Business%20Analyst%20Consultant" class="apply-btn">Apply via Email</a>
+                <button type="button" class="apply-btn" data-apply data-position="Business Analyst Consultant">Apply Now</button>
                 <p class="apply-note">Full position description available on request.</p>
               </div>
             </div>
@@ -1218,7 +1398,7 @@
               </div>
               <div class="job-apply-panel">
                 <p>Send your resume and a brief note about the type of work you're looking for.</p>
-                <a href="mailto:careers@cmcgfla.com?subject=Application%20%E2%80%94%20Salesforce%20Data%20Specialist" class="apply-btn">Apply via Email</a>
+                <button type="button" class="apply-btn" data-apply data-position="Entry-Level Salesforce Data Specialist">Apply Now</button>
                 <p class="apply-note">Full position description available on request.</p>
               </div>
             </div>
@@ -1264,7 +1444,7 @@
               </div>
               <div class="job-apply-panel">
                 <p>Send your resume and a brief note about the type of work you're looking for.</p>
-                <a href="mailto:careers@cmcgfla.com?subject=Application%20%E2%80%94%20Marketing%20%26%20Procurement%20Specialist" class="apply-btn">Apply via Email</a>
+                <button type="button" class="apply-btn" data-apply data-position="Marketing & Procurement Specialist">Apply Now</button>
                 <p class="apply-note">Full position description available on request.</p>
               </div>
             </div>
@@ -1284,13 +1464,123 @@
         <p>If your background aligns with the work we do — government consulting, Salesforce, finance, grants management — send us a note regardless of current openings.</p>
       </div>
       <div class="cta-actions fu d1">
-        <a href="mailto:careers@cmcgfla.com" class="btn btn-leaf">Send a General Inquiry</a>
+        <a href="mailto:careers@cmcgfla.com" class="btn btn-leaf" data-apply data-position="General / Other">Send a General Inquiry</a>
         <a href="about.html" class="btn btn-ghost">Meet Our Team</a>
       </div>
     </div>
   </section>
 
 </main>
+
+<!-- APPLY MODAL ======================================= -->
+<div class="apply-modal" id="apply-modal" role="dialog" aria-modal="true" aria-labelledby="apply-modal-title" hidden>
+  <div class="apply-modal-overlay" data-close></div>
+  <div class="apply-modal-card">
+    <button type="button" class="apply-modal-close" aria-label="Close application form" data-close>&times;</button>
+    <span class="eyebrow eyebrow--light">Apply</span>
+    <h2 id="apply-modal-title">Apply to Canopy</h2>
+    <p class="apply-for">Applying for: <strong id="apply-position-label">—</strong></p>
+
+    <form id="apply-form" class="apply-form" novalidate>
+      <input type="hidden" id="apply-position" name="position" value="">
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="ap-name">Full Name <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="ap-name" name="name" autocomplete="name" required placeholder="Jane Smith">
+        </div>
+        <div class="form-field">
+          <label for="ap-email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="ap-email" name="email" autocomplete="email" required placeholder="you@email.com">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="ap-phone">Phone</label>
+          <input type="tel" id="ap-phone" name="phone" autocomplete="tel" placeholder="850-555-0100">
+        </div>
+        <div class="form-field">
+          <label for="ap-linkedin">LinkedIn URL</label>
+          <input type="url" id="ap-linkedin" name="linkedin" placeholder="https://linkedin.com/in/…">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="ap-workauth">Work Authorization <span class="req" aria-hidden="true">*</span></label>
+        <select id="ap-workauth" name="workAuthorization" required>
+          <option value="" disabled selected>Select one…</option>
+          <option value="Authorized to work in the U.S. for any employer">Authorized to work in the U.S. for any employer</option>
+          <option value="Authorized now, will require sponsorship in the future">Authorized now, will require sponsorship in the future</option>
+          <option value="Require sponsorship to work in the U.S.">Require sponsorship to work in the U.S.</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="ap-experience">Experience Level</label>
+          <select id="ap-experience" name="experienceLevel">
+            <option value="" disabled selected>Select one…</option>
+            <option value="Entry">Entry</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="ap-start">Earliest Start Date</label>
+          <input type="date" id="ap-start" name="earliestStartDate">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="ap-salary">Salary Expectations</label>
+          <input type="text" id="ap-salary" name="salaryExpectation" placeholder="e.g. $70–80k or Negotiable">
+        </div>
+        <div class="form-field">
+          <label for="ap-referral">How did you hear about us?</label>
+          <select id="ap-referral" name="referralSource">
+            <option value="" disabled selected>Select one…</option>
+            <option value="LinkedIn">LinkedIn</option>
+            <option value="Indeed">Indeed</option>
+            <option value="Company Website">Company Website</option>
+            <option value="Employee Referral">Employee Referral</option>
+            <option value="Job Fair / Event">Job Fair / Event</option>
+            <option value="Search Engine">Search Engine</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="ap-referral-detail">If referral or other — who or where?</label>
+        <input type="text" id="ap-referral-detail" name="referralSourceDetail" placeholder="Name or detail (optional)">
+      </div>
+
+      <div class="form-field">
+        <label for="ap-message">Cover Note</label>
+        <textarea id="ap-message" name="message" placeholder="A brief note about the type of work you're looking for."></textarea>
+      </div>
+
+      <div class="form-field">
+        <label for="ap-resume">Résumé <span class="req" aria-hidden="true">*</span></label>
+        <input type="file" id="ap-resume" name="resume" accept=".pdf,.doc,.docx" required>
+        <span class="field-hint">PDF, DOC, or DOCX — max 3 MB.</span>
+      </div>
+
+      <div class="form-footer">
+        <p class="form-note">Fields marked <span style="color:var(--leaf);">*</span> are required.</p>
+        <button type="submit" class="btn-leaf">Submit Application</button>
+      </div>
+    </form>
+
+    <div class="apply-success" id="apply-success" role="alert" aria-live="polite">
+      <p>Your application was submitted.
+        <span>Thank you — our team will review it and reach out if there's a fit.</span>
+      </p>
+    </div>
+  </div>
+</div>
 
 <!-- FOOTER ============================================ -->
 <footer role="contentinfo">
@@ -1439,6 +1729,128 @@
       });
     });
   });
+
+  // Apply modal
+  var applyModal    = document.getElementById('apply-modal');
+  var applyForm     = document.getElementById('apply-form');
+  var applySuccess  = document.getElementById('apply-success');
+  var applyPosInput = document.getElementById('apply-position');
+  var applyPosLabel = document.getElementById('apply-position-label');
+  var MAX_RESUME    = 3 * 1024 * 1024; // 3 MB
+  var lastFocused   = null;
+
+  function openApply(position) {
+    var pos = position || 'General / Other';
+    applyPosInput.value = pos;
+    applyPosLabel.textContent = pos;
+    applyForm.style.display = '';
+    applySuccess.style.display = 'none';
+    var submitBtn = applyForm.querySelector('button[type="submit"]');
+    submitBtn.textContent = 'Submit Application';
+    submitBtn.disabled = false;
+    applyModal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lastFocused = document.activeElement;
+    var first = document.getElementById('ap-name');
+    if (first) first.focus();
+  }
+  function closeApply() {
+    applyModal.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocused && lastFocused.focus) lastFocused.focus();
+  }
+
+  if (applyModal && applyForm) {
+    document.querySelectorAll('[data-apply]').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        openApply(btn.getAttribute('data-position'));
+      });
+    });
+    applyModal.querySelectorAll('[data-close]').forEach(function (el) {
+      el.addEventListener('click', closeApply);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !applyModal.hidden) closeApply();
+    });
+
+    function fileToBase64(file) {
+      return new Promise(function (resolve, reject) {
+        var reader = new FileReader();
+        reader.onload = function () {
+          var result = reader.result || '';
+          var comma = result.indexOf(',');
+          resolve(comma >= 0 ? result.slice(comma + 1) : result);
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    applyForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var submitBtn = applyForm.querySelector('button[type="submit"]');
+
+      var name     = document.getElementById('ap-name').value.trim();
+      var email    = document.getElementById('ap-email').value.trim();
+      var workAuth = document.getElementById('ap-workauth').value;
+      var resumeFile = document.getElementById('ap-resume').files[0];
+
+      if (!name || !email || !workAuth) {
+        submitBtn.textContent = 'Please complete the required fields.';
+        return;
+      }
+      if (!resumeFile) {
+        submitBtn.textContent = 'Please attach your résumé.';
+        return;
+      }
+      if (resumeFile.size > MAX_RESUME) {
+        submitBtn.textContent = 'Résumé is too large (max 3 MB).';
+        return;
+      }
+
+      submitBtn.textContent = 'Submitting…';
+      submitBtn.disabled = true;
+
+      fileToBase64(resumeFile).then(function (base64) {
+        var payload = {
+          name:                 name,
+          email:                email,
+          phone:                document.getElementById('ap-phone').value.trim(),
+          linkedin:             document.getElementById('ap-linkedin').value.trim(),
+          workAuthorization:    workAuth,
+          experienceLevel:      document.getElementById('ap-experience').value,
+          earliestStartDate:    document.getElementById('ap-start').value,
+          salaryExpectation:    document.getElementById('ap-salary').value.trim(),
+          referralSource:       document.getElementById('ap-referral').value,
+          referralSourceDetail: document.getElementById('ap-referral-detail').value.trim(),
+          message:              document.getElementById('ap-message').value.trim(),
+          position:             applyPosInput.value,
+          resumeBase64:         base64,
+          resumeFilename:       resumeFile.name
+        };
+        return fetch('/api/careers', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      })
+      .then(function (res) { return res.json(); })
+      .then(function (json) {
+        if (json && json.success) {
+          applyForm.style.display = 'none';
+          applySuccess.style.display = 'block';
+        } else {
+          submitBtn.textContent = 'Something went wrong — email careers@cmcgfla.com';
+          submitBtn.disabled = false;
+        }
+      })
+      .catch(function () {
+        submitBtn.textContent = 'Something went wrong — email careers@cmcgfla.com';
+        submitBtn.disabled = false;
+      });
+    });
+  }
 
 })();
 </script>

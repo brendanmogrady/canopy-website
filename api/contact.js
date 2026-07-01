@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const { getSalesforceToken, createRecord, resolveRecordTypeId } = require('./_sf');
 
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -62,56 +63,26 @@ module.exports = async function handler(req, res) {
 
   // ── 2. Salesforce Website_Inquiry__c ─────────────────
   try {
-    // Authenticate via username-password OAuth flow
-    const tokenRes = await fetch(`${process.env.SF_LOGIN_URL}/services/oauth2/token`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        grant_type: 'password',
-        client_id: process.env.SF_CLIENT_ID,
-        client_secret: process.env.SF_CLIENT_SECRET,
-        username: process.env.SF_USERNAME,
-        password: process.env.SF_PASSWORD + (process.env.SF_SECURITY_TOKEN || ''),
-      }),
-    });
+    // Authenticate server-to-server via the Client Credentials flow
+    const { accessToken, instanceUrl } = await getSalesforceToken();
 
-    const token = await tokenRes.json();
-    if (!token.access_token) throw new Error(`SF auth failed: ${JSON.stringify(token)}`);
-
-    const apiBase = `${token.instance_url}/services/data/v60.0`;
-    const headers = {
-      Authorization: `Bearer ${token.access_token}`,
-      'Content-Type': 'application/json',
-    };
-
-    // Resolve the Contact_Us_Inquiry record type ID
-    const rtQuery = encodeURIComponent(
-      "SELECT Id FROM RecordType WHERE SObjectType='Website_Inquiry__c' AND DeveloperName='Contact_Us_Inquiry' LIMIT 1"
+    // Resolve the Contact_Us_Inquiry record type ID (differs sandbox vs prod)
+    const recordTypeId = await resolveRecordTypeId(
+      instanceUrl, accessToken, 'Website_Inquiry__c', 'Contact_Us_Inquiry'
     );
-    const rtRes  = await fetch(`${apiBase}/query?q=${rtQuery}`, { headers });
-    const rtData = await rtRes.json();
-    const recordTypeId = rtData.records?.[0]?.Id;
 
     // Create the Website_Inquiry__c record
-    const inquiryRes = await fetch(`${apiBase}/sobjects/Website_Inquiry__c/`, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        Name:                name,
-        Organization__c:     organization,
-        Title__c:            title || '',
-        Email__c:            email,
-        Phone__c:            phone || '',
-        Area_of_Interest__c: service || '',
-        Message__c:          message,
-        Status__c:           'New',
-        Submitted_Date__c:   new Date().toISOString(),
-        ...(recordTypeId && { RecordTypeId: recordTypeId }),
-      }),
+    const inquiry = await createRecord(instanceUrl, accessToken, 'Website_Inquiry__c', {
+      Name:                name,
+      Organization__c:     organization,
+      Title__c:            title || '',
+      Email__c:            email,
+      Phone__c:            phone || '',
+      Area_of_Interest__c: service || '',
+      Message__c:          message,
+      Submitted_Date__c:   new Date().toISOString(),
+      ...(recordTypeId && { RecordTypeId: recordTypeId }),
     });
-
-    const inquiry = await inquiryRes.json();
-    if (!inquiryRes.ok) throw new Error(JSON.stringify(inquiry));
     console.log('Salesforce Website_Inquiry__c created:', inquiry.id);
   } catch (err) {
     console.error('Salesforce error:', err.message);
