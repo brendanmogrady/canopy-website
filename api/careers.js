@@ -58,6 +58,7 @@ module.exports = async function handler(req, res) {
   const positionLabel = position || 'General / Other';
   const department = POSITION_TO_DEPARTMENT[positionLabel] || '';
   const failures = [];
+  const errors = []; // TEMP: detailed error messages for debugging
 
   // ── 1. Email notification ─────────────────────────────
   try {
@@ -135,12 +136,14 @@ module.exports = async function handler(req, res) {
       } catch (fileErr) {
         console.error('Résumé upload error:', fileErr.message);
         failures.push('resume');
+        errors.push('resume: ' + fileErr.message);
       }
     }
   } catch (err) {
     console.error('Salesforce error:', err.message);
     failures.push('salesforce');
+    errors.push('salesforce: ' + err.message);
   }
 
-  return res.status(200).json({ success: true, failures });
+  return res.status(200).json({ success: true, failures, errors });
 };

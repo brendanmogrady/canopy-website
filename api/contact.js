@@ -13,6 +13,7 @@ module.exports = async function handler(req, res) {
   }
 
   const failures = [];
+  const errors = []; // TEMP: detailed error messages for debugging
 
   // ── 1. Email notification ─────────────────────────────
   try {
@@ -87,7 +88,8 @@ module.exports = async function handler(req, res) {
   } catch (err) {
     console.error('Salesforce error:', err.message);
     failures.push('salesforce');
+    errors.push('salesforce: ' + err.message);
   }
 
-  return res.status(200).json({ success: true, failures });
+  return res.status(200).json({ success: true, failures, errors });
 };
