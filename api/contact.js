@@ -1,6 +1,12 @@
 const nodemailer = require('nodemailer');
 const { getSalesforceToken, createRecord, resolveRecordTypeId } = require('./_sf');
 
+// Where inquiry notifications are sent. Set CONTACT_NOTIFY_EMAIL in Vercel
+// (it can differ per environment, e.g. Preview vs Production).
+// The fallback is deliberately a personal inbox so a missing/misconfigured
+// variable can never spam a shared mailbox.
+const NOTIFY_EMAIL = process.env.CONTACT_NOTIFY_EMAIL || 'brendan.ogrady@cmcgfla.com';
+
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -29,7 +35,7 @@ module.exports = async function handler(req, res) {
 
     await transporter.sendMail({
       from: `"Canopy Website" <${process.env.SMTP_USER}>`,
-      to: 'brendan.ogrady@cmcgfla.com',
+      to: NOTIFY_EMAIL,
       replyTo: email,
       subject: `New Inquiry: ${name} — ${organization}`,
       text: [
@@ -60,6 +66,7 @@ module.exports = async function handler(req, res) {
   } catch (err) {
     console.error('Email error:', err.message);
     failures.push('email');
+    errors.push('email: ' + err.message);
   }
 
   // ── 2. Salesforce Website_Inquiry__c ─────────────────

@@ -12,6 +12,13 @@ const POSITION_TO_DEPARTMENT = {
   // 'General / Other' → no department
 };
 
+// Where application notifications are sent. Set CAREERS_NOTIFY_EMAIL in Vercel
+// (it can differ per environment, e.g. Preview vs Production).
+// GO-LIVE: set CAREERS_NOTIFY_EMAIL='careers@cmcgfla.com' in Production.
+// The fallback is deliberately a personal inbox so a missing/misconfigured
+// variable can never spam the shared careers mailbox.
+const NOTIFY_EMAIL = process.env.CAREERS_NOTIFY_EMAIL || 'brendan.ogrady@cmcgfla.com';
+
 const ALLOWED_RESUME_EXT = ['pdf', 'doc', 'docx'];
 const MAX_RESUME_BYTES = 3 * 1024 * 1024; // ~3 MB raw (stays under Vercel's body limit once base64-encoded)
 
@@ -71,7 +78,7 @@ module.exports = async function handler(req, res) {
 
     await transporter.sendMail({
       from: `"Canopy Careers" <${process.env.SMTP_USER}>`,
-      to: 'careers@cmcgfla.com',
+      to: NOTIFY_EMAIL,
       replyTo: email,
       subject: `New Application: ${name} — ${positionLabel}`,
       text: [
@@ -95,6 +102,7 @@ module.exports = async function handler(req, res) {
   } catch (err) {
     console.error('Email error:', err.message);
     failures.push('email');
+    errors.push('email: ' + err.message);
   }
 
   // ── 2. Salesforce Career_Application__c + résumé file ─
