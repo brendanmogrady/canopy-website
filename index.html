@@ -106,7 +106,10 @@
       --bone:     #DBD3C9;
       --sage:     #738063;
       --leaf:     #83AD36;
-      --stone:    #6B5C50;
+      --stone:    #6B5C50;   /* accessible dark tint of the brand neutral,
+                                for small text on light backgrounds */
+      --taupe:    #9A8A7B;   /* official brand neutral — use on --midnight;
+                                fails AA on light backgrounds */
       --offwhite: #F0EBE5;
       --white:    #FFFFFF;
 
@@ -156,6 +159,8 @@
       font-weight: 700;
       line-height: 1.13;
       letter-spacing: -0.02em;
+      /* Balance headline line breaks so no single word is left alone. */
+      text-wrap: balance;
     }
 
     .eyebrow {
@@ -757,7 +762,14 @@
       font-size: clamp(1.85rem, 3.5vw, 2.7rem);
       color: var(--midnight);
       margin-top: 0.6rem;
-      max-width: 580px;
+      max-width: 720px;
+    }
+
+    /* Keep a phrase on a single line, but only where there is room for it.
+       Below this width the text is allowed to wrap normally so it can never
+       overflow a narrow screen. */
+    @media (min-width: 620px) {
+      .nowrap-lg { white-space: nowrap; }
     }
 
     .diff-grid {
@@ -1961,7 +1973,7 @@
   <section id="about" aria-labelledby="diff-heading">
     <div class="diff-head wrap">
       <span class="eyebrow">The Canopy Difference</span>
-      <h2 id="diff-heading" class="fu">We were the clients.<br>Now we are the consultants.</h2>
+      <h2 id="diff-heading" class="fu">We were the clients.<br><span class="nowrap-lg">Now we are the consultants.</span></h2>
     </div>
 
     <div class="diff-grid fu d1">

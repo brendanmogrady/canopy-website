@@ -43,7 +43,10 @@
       --bone:     #DBD3C9;
       --sage:     #738063;
       --leaf:     #83AD36;
-      --stone:    #6B5C50;
+      --stone:    #6B5C50;   /* accessible dark tint of the brand neutral,
+                                for small text on light backgrounds */
+      --taupe:    #9A8A7B;   /* official brand neutral — use on --midnight;
+                                fails AA on light backgrounds */
       --offwhite: #F0EBE5;
       --white:    #FFFFFF;
 
@@ -81,6 +84,8 @@
       font-weight: 700;
       line-height: 1.13;
       letter-spacing: -0.02em;
+      /* Balance headline line breaks so no single word is left alone. */
+      text-wrap: balance;
     }
 
     .eyebrow {
@@ -246,52 +251,33 @@
       margin-bottom: 2rem;
     }
 
-    .hero-founding {
-      display: flex;
-      gap: 2.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(219,211,201,0.12);
-    }
-    .hero-founding-item {
+    /* Hero right: the founding figures, as counterweight to the headline.
+       .hero-inner is a centred grid, so this column's middle figure sits
+       level with the centre of the headline block on the left. */
+    .hero-stats {
       display: flex;
       flex-direction: column;
-      gap: 0.2rem;
+      gap: 2.6rem;
+      padding-left: 3.25rem;
+      border-left: 1px solid rgba(219,211,201,0.14);
     }
-    .founding-val {
+    .hero-stat-val {
+      display: block;
       font-family: var(--font-head);
-      font-size: 1.6rem;
+      font-size: clamp(2.3rem, 4vw, 3.3rem);
       font-weight: 800;
       color: var(--leaf);
       line-height: 1;
     }
-    .founding-lbl {
-      font-family: var(--font-body);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(219,211,201,0.45);
-    }
-
-    /* Hero right: team photo */
-    .hero-photo {
-      position: relative;
-      aspect-ratio: 4/3;
-      overflow: hidden;
-    }
-    .hero-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 50%;
+    .hero-stat-lbl {
       display: block;
-    }
-    .hero-photo::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border: 1px solid rgba(131,173,54,0.2);
-      pointer-events: none;
+      margin-top: 0.55rem;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(219,211,201,0.5);
     }
 
     /* =====================================================
@@ -626,11 +612,6 @@
     }
     .profile-linkedin:hover { color: var(--leaf); }
 
-    /* Salesforce specialist card — visually distinguished */
-    .profile-card--sf {
-      border-left: 3px solid var(--leaf);
-    }
-
     /* =====================================================
        HOW WE WORK
     ===================================================== */
@@ -832,12 +813,15 @@
       .profile-card    { grid-template-columns: 1fr; }
       .profile-photo   { aspect-ratio: 4/3; }
       .footer-top      { grid-template-columns: 1fr; }
-      .hero-founding   { gap: 1.5rem; }
+      .hero-stats      { flex-direction: row; flex-wrap: wrap; gap: 2rem;
+                         padding-left: 0; padding-top: 2rem;
+                         border-left: none;
+                         border-top: 1px solid rgba(219,211,201,0.14); }
     }
 
     @media (max-width: 480px) {
       .profile-body { padding: 1.75rem 1.25rem; }
-      .hero-founding { flex-direction: column; gap: 1rem; }
+      .hero-stats { flex-direction: column; gap: 1.25rem; }
     }
   </style>
 </head>
@@ -880,27 +864,21 @@
         <p class="hero-sub">
           We saw gaps in the services available to public-sector clients and set out to build responsive solutions that help agencies move work forward with practical, hands-on support.
         </p>
-        <div class="hero-founding">
-          <div class="hero-founding-item">
-            <span class="founding-val">2020</span>
-            <span class="founding-lbl">Founded</span>
-          </div>
-          <div class="hero-founding-item">
-            <span class="founding-val">6</span>
-            <span class="founding-lbl">Former Florida Government Executives</span>
-          </div>
-          <div class="hero-founding-item">
-            <span class="founding-val">100+</span>
-            <span class="founding-lbl">Years Combined State Service</span>
-          </div>
-        </div>
       </div>
 
-      <div class="hero-photo fu d2">
-        <img
-          src="images/team/b-and-d-walking.png"
-          alt="Damon Steffens and Brian Swords walking in Tallahassee"
-          loading="eager">
+      <div class="hero-stats fu d2">
+        <div>
+          <span class="hero-stat-val">2020</span>
+          <span class="hero-stat-lbl">Founded</span>
+        </div>
+        <div>
+          <span class="hero-stat-val">6</span>
+          <span class="hero-stat-lbl">Former Florida Government Executives</span>
+        </div>
+        <div>
+          <span class="hero-stat-val">100+</span>
+          <span class="hero-stat-lbl">Years Combined State Service</span>
+        </div>
       </div>
 
     </div>
@@ -1042,10 +1020,10 @@
           <p class="profile-canopy-title">Chief Executive Officer, Canopy Management Consulting Group</p>
           <div class="profile-divider"></div>
           <p class="profile-bio">
-            As CFO of a large Florida state agency, Steffens was responsible for the full spectrum of state and federal financial management — appropriations, budget hearings, procurement, grants compliance, and financial monitoring across a large, federally funded agency portfolio. He has defended agency budgets before legislative committees and managed the financial architecture of programs that directly impacted Florida businesses and workforce programs.
+            As CFO of a large Florida state agency, Steffens was responsible for the full spectrum of state and federal financial management: appropriations, budget hearings, procurement, grants compliance, and financial monitoring across a large, federally funded agency portfolio. He has defended agency budgets before legislative committees and managed the financial architecture of programs that directly impacted Florida businesses and workforce programs.
           </p>
           <p class="profile-bio">
-            He co-founded Canopy in 2020 with the conviction that public sector organizations deserve consulting partners who have held the same accountabilities they hold — not just studied them.
+            He co-founded Canopy in 2020 with the conviction that public sector organizations deserve consulting partners who have held the same accountabilities they hold, not just studied them.
           </p>
           <div class="profile-accomplishment">
             <span class="pending">[Specific accomplishment — budget managed, initiative led, crisis navigated — pending Damon's input]</span>
@@ -1068,10 +1046,10 @@
           <p class="profile-canopy-title">Co-Owner &amp; Managing Partner, Canopy Management Consulting Group</p>
           <div class="profile-divider"></div>
           <p class="profile-bio">
-            As Deputy CIO of a large Florida state agency, Swords held operational responsibility for enterprise technology — project delivery, vendor management, technology governance, and the systems that support grants management, workforce programs, and agency administration. He brings a practitioner's understanding of what it takes to procure, implement, and sustain enterprise technology inside a state agency.
+            As Deputy CIO of a large Florida state agency, Swords held operational responsibility for enterprise technology: project delivery, vendor management, technology governance, and the systems that support grants management, workforce programs, and agency administration. He brings a practitioner's understanding of what it takes to procure, implement, and sustain enterprise technology inside a state agency.
           </p>
           <p class="profile-bio">
-            He co-founded Canopy alongside Damon Steffens, combining executive finance and IT experience under one firm — the combination their clients need most.
+            He co-founded Canopy alongside Damon Steffens, combining executive finance and IT experience under one firm. It is the combination their clients need most.
           </p>
           <div class="profile-accomplishment">
             <span class="pending">[Specific accomplishment — pending Brian's input]</span>
@@ -1094,7 +1072,7 @@
           <p class="profile-canopy-title">Managing Director, IT Consulting &amp; Advisory Services</p>
           <div class="profile-divider"></div>
           <p class="profile-bio">
-            Ed Wynn served as CIO of a large Florida state agency, leading enterprise IT strategy, major systems procurement, and technology governance across the agency's programs. With decades of combined public sector service and consulting experience, he has worked as CIO, PMO director, project manager, and technology instructor — giving him a full-spectrum view of how government technology decisions are made and what it takes to execute them.
+            Ed Wynn served as CIO of a large Florida state agency, leading enterprise IT strategy, major systems procurement, and technology governance across the agency's programs. With decades of combined public sector service and consulting experience, he has worked as CIO, PMO director, project manager, and technology instructor. That range gives him a full-spectrum view of how government technology decisions are made and what it takes to execute them.
           </p>
           <p class="profile-bio">
             At Canopy, he leads IT consulting and advisory engagements, helping agency clients make technology decisions that survive budget cycles and procurement timelines.
@@ -1120,7 +1098,7 @@
           <p class="profile-canopy-title">Managing Director, Finance</p>
           <div class="profile-divider"></div>
           <p class="profile-bio">
-            Will Currie brings more than 20 years of experience across Florida state government and consulting, with a career that spans nearly every level of public service — from entry-level operational roles to executive leadership positions. Having worked throughout the full spectrum of government finance and administration, including accounting, budgeting, grants management, financial reporting, and agency operations, he offers a unique perspective on how policy, process, and execution intersect.
+            Will Currie brings more than 20 years of experience across Florida state government and consulting, with a career that spans nearly every level of public service, from entry-level operational roles to executive leadership positions. Having worked throughout the full spectrum of government finance and administration, including accounting, budgeting, grants management, financial reporting, and agency operations, he offers a unique perspective on how policy, process, and execution intersect.
           </p>
           <p class="profile-bio">
             His experience leading multi-billion-dollar programs, serving as a state agency Chief Financial Officer, and advising government clients today allows him to effectively connect frontline operational realities with executive-level strategic decision-making.
@@ -1169,7 +1147,7 @@
           <p class="profile-canopy-title">Managing Director, Accounting</p>
           <div class="profile-divider"></div>
           <p class="profile-bio">
-            As Chief of Financial Management at a large Florida state agency, Toro held leadership responsibility for grants management and federal financial reporting — the exact functions that Canopy now helps other agencies build and operate. He was a critical contributor to the design and deployment of Canopy's Salesforce-based grants management systems, bringing direct operational experience to the implementation work.
+            As Chief of Financial Management at a large Florida state agency, Toro held leadership responsibility for grants management and federal financial reporting, the exact functions that Canopy now helps other agencies build and operate. He was a critical contributor to the design and deployment of Canopy's Salesforce-based grants management systems, bringing direct operational experience to the implementation work.
           </p>
           <p class="profile-bio">
             His combination of government finance leadership and hands-on Salesforce implementation experience is rare and directly relevant to clients modernizing their grants and financial operations.
@@ -1185,7 +1163,7 @@
       </article>
 
       <!-- Rebbeca Beers — Salesforce specialist, no FL Commerce prior role -->
-      <article class="profile-card profile-card--sf fu">
+      <article class="profile-card fu">
         <div class="profile-photo">
           <img src="images/team/rebbeca-beers.jpg" alt="Rebbeca Beers, Managing Director Salesforce at Canopy Management Consulting Group" loading="lazy" width="280" height="373">
         </div>
@@ -1195,10 +1173,10 @@
           <p class="profile-canopy-title">Managing Director, Salesforce</p>
           <div class="profile-divider"></div>
           <p class="profile-bio">
-            Rebbeca Beers leads Canopy's Salesforce practice — the technical capability that makes the team's government experience actionable on a modern platform. Fourteen-times Salesforce certified and accredited, she brings deep implementation and architecture expertise with a public sector focus and a commitment to building technical solutions that genuinely serve communities.
+            Rebbeca Beers leads Canopy's Salesforce practice, the technical capability that makes the team's government experience actionable on a modern platform. Fourteen-times Salesforce certified and accredited, she brings deep implementation and architecture expertise with a public sector focus and a commitment to building technical solutions that genuinely serve communities.
           </p>
           <p class="profile-bio">
-            She joined Canopy to partner a team of former government executives with the Salesforce technical depth to translate their operational knowledge into production-ready systems — including Canopy's Agentforce deployment in Florida state government.
+            She joined Canopy to partner a team of former government executives with the Salesforce technical depth to translate their operational knowledge into production-ready systems, including Canopy's Agentforce deployment in Florida state government.
           </p>
           <a href="https://www.linkedin.com/in/rebbeca-beers-mba-a71241a" class="profile-linkedin" target="_blank" rel="noopener">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>

@@ -50,7 +50,10 @@
       --bone:     #DBD3C9;
       --sage:     #738063;
       --leaf:     #83AD36;
-      --stone:    #6B5C50;
+      --stone:    #6B5C50;   /* accessible dark tint of the brand neutral,
+                                for small text on light backgrounds */
+      --taupe:    #9A8A7B;   /* official brand neutral — use on --midnight;
+                                fails AA on light backgrounds */
       --offwhite: #F0EBE5;
       --white:    #FFFFFF;
 
@@ -88,6 +91,8 @@
       font-weight: 700;
       line-height: 1.13;
       letter-spacing: -0.02em;
+      /* Balance headline line breaks so no single word is left alone. */
+      text-wrap: balance;
     }
 
     .eyebrow {
