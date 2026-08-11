@@ -37,7 +37,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Raleway:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -50,13 +50,13 @@
       --leaf:     #83AD36;
       --stone:    #6B5C50;   /* accessible dark tint of the brand neutral,
                                 for small text on light backgrounds */
-      --taupe:    #9A8A7B;   /* official brand neutral — use on --midnight;
+      --taupe:    #9A8A7B;   /* official brand neutral: use on --midnight;
                                 fails AA on light backgrounds */
       --offwhite: #F0EBE5;
       --white:    #FFFFFF;
 
       --font-head:  'Montserrat', sans-serif;
-      --font-body:  'Raleway', sans-serif;
+      --font-body:  Calibri, Arial, sans-serif;
       --font-quote: Cambria, 'Times New Roman', Georgia, serif;
 
       --mw: 1180px;
@@ -702,7 +702,7 @@
 
 <!-- HEADER ============================================ -->
 <header id="site-header" role="banner">
-  <a href="index.html" class="logo-wrap" aria-label="Canopy Management Consulting Group — Home">
+  <a href="index.html" class="logo-wrap" aria-label="Canopy Management Consulting Group, Home">
     <img src="images/logos/logo-icon.png" alt="" class="logo-img" aria-hidden="true">
     <span class="logo-wordmark">Canopy Management<br>Consulting Group</span>
   </a>
@@ -731,7 +731,7 @@
       <span class="eyebrow eyebrow--light fu">Get in Touch</span>
       <h1 id="hero-heading" class="fu d1">Start the conversation.</h1>
       <p class="hero-sub fu d2">
-        We keep engagements focused and conversations direct. Tell us what you are working on and we will tell you honestly what we think — including when we are not the right fit.
+        We keep engagements focused and conversations direct. Tell us what you are working on and we will tell you honestly what we think, including when we are not the right fit.
       </p>
       <div class="hero-quick-links fu d3">
         <a href="mailto:canopy@cmcgfla.com" class="btn btn-leaf">Email Our Team</a>
@@ -809,7 +809,7 @@
 
           <div class="form-field">
             <label for="message">What are you working on? <span class="req" aria-hidden="true">*</span></label>
-            <textarea id="message" name="message" required placeholder="Give us a sense of the project — the problem, the timeline, the constraints. There are no wrong answers here."></textarea>
+            <textarea id="message" name="message" required placeholder="Give us a sense of the project: the problem, the timeline, the constraints. There are no wrong answers here."></textarea>
           </div>
 
           <div class="form-footer">
@@ -878,10 +878,10 @@
         <div class="contact-card-proc">
           <p class="proc-label">Procurement Vehicles</p>
           <p style="font-size: 0.83rem; color: var(--stone); line-height: 1.65; margin-bottom: 1.1rem;">
-            State, local, and nonprofit entities can engage Canopy through existing contract vehicles — no standalone RFP required.
+            State, local, and nonprofit entities can engage Canopy through existing contract vehicles, no standalone RFP required.
           </p>
           <ul class="proc-list">
-            <li>GSA Schedule — Contract No. 47QRAA23D001H</li>
+            <li>GSA Schedule, Contract No. 47QRAA23D001H</li>
             <li>TIPS Awarded Vendor</li>
             <li>Salesforce Implementation Ready Partner</li>
           </ul>
@@ -906,19 +906,19 @@
         <div class="expect-card">
           <span class="expect-num" aria-hidden="true">01</span>
           <h3>We respond within one business day.</h3>
-          <p>Every message gets a real response from someone on our team — not an automated confirmation and a week of silence.</p>
+          <p>Every message gets a real response from someone on our team, not an automated confirmation and a week of silence.</p>
         </div>
 
         <div class="expect-card">
           <span class="expect-num" aria-hidden="true">02</span>
           <h3>We listen before we pitch.</h3>
-          <p>The first conversation is about understanding your situation — the problem, the constraints, the timeline, and the political context that does not fit in a brief.</p>
+          <p>The first conversation is about understanding your situation: the problem, the constraints, the timeline, and the political context that does not fit in a brief.</p>
         </div>
 
         <div class="expect-card">
           <span class="expect-num" aria-hidden="true">03</span>
           <h3>We tell you honestly if we are not the right fit.</h3>
-          <p>We are a boutique firm with specific expertise. If your project is outside our lane, we will say so directly — and try to point you somewhere useful.</p>
+          <p>We are a boutique firm with specific expertise. If your project is outside our lane, we will say so directly, and try to point you somewhere useful.</p>
         </div>
 
         <div class="expect-card">
@@ -949,7 +949,7 @@
         </address>
         <ul class="footer-cred-list">
           <li>Salesforce Implementation Ready Partner</li>
-          <li>GSA Schedule — Contract No. 47QRAA23D001H</li>
+          <li>GSA Schedule, Contract No. 47QRAA23D001H</li>
           <li>TIPS Awarded Vendor</li>
           <li><a href="procurement.html" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">View all contract vehicles →</a></li>
         </ul>
@@ -1050,7 +1050,7 @@
   }
 
   // Form: show success message on Formspree redirect / AJAX
-  // Formspree supports AJAX submissions — handle response here
+  // Formspree supports AJAX submissions, handle response here
   var form    = document.getElementById('contact-form-el');
   var success = document.getElementById('form-success');
 
@@ -1082,12 +1082,12 @@
             form.style.display = 'none';
             success.style.display = 'block';
           } else {
-            btn.textContent = 'Something went wrong — please email us directly.';
+            btn.textContent = 'Something went wrong, please email us directly.';
             btn.disabled = false;
           }
         })
         .catch(function () {
-          btn.textContent = 'Something went wrong — please email us directly.';
+          btn.textContent = 'Something went wrong, please email us directly.';
           btn.disabled = false;
         });
     });
