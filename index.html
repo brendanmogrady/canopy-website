@@ -92,7 +92,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Raleway:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
   <style>
     /* =====================================================
@@ -114,7 +114,7 @@
       --white:    #FFFFFF;
 
       --font-head:  'Montserrat', sans-serif;
-      --font-body:  Calibri, Arial, sans-serif;
+      --font-body:  'Raleway', sans-serif;
       --font-quote: Cambria, 'Times New Roman', Georgia, serif;
 
       --mw: 1180px;
@@ -368,7 +368,7 @@
       display: block;
     }
 
-    /* Dark overlay, keeps headline readable over bright canopy */
+    /* Dark overlay to keep the headline readable over the canopy photo */
     .hero-bg::after {
       content: '';
       position: absolute;
@@ -633,7 +633,7 @@
       margin-bottom: 2.2rem;
     }
 
-    /* Carousel wrapper, clips the scrolling track */
+    /* Carousel wrapper that clips the scrolling track */
     .cred-clients-wrap {
       overflow: hidden;
       margin-bottom: 2.5rem;
@@ -928,7 +928,7 @@
       overflow: hidden;
     }
 
-    /* REPLACE: muted architectural photography of civic / community spaces */
+    /* Government serve-block: gradient panel that sits behind the photo */
     .serve-block-gov {
       background: linear-gradient(148deg, #1a2535 0%, #1d2e1d 60%, #0E1726 100%);
     }
@@ -1315,7 +1315,7 @@
       overflow: hidden;
     }
 
-    /* Photo placeholder, replace with black-and-white executive portraits */
+    /* Leader photo fallback styling */
     .leader-photo-ph {
       width: 100%;
       height: 100%;
@@ -1768,13 +1768,6 @@
 
   <!-- HERO ============================================ -->
   <section id="hero" aria-label="Introduction">
-    <!--
-      PRODUCTION NOTE: Replace .hero-bg background with a high-resolution
-      photograph of a Southern live oak canopy: bright, lush, optimistic.
-      Suggested: looking upward through Spanish moss-draped limbs, bright sky
-      visible through the leaves. Black-and-white or lightly desaturated.
-      Use <picture> with WebP + JPEG fallback. Add preload link in <head>.
-    -->
     <div class="hero-bg">
       <img src="images/hero/large-tree.jpg" alt="Southern live oak with Spanish moss in Tallahassee, Florida" fetchpriority="high">
     </div>
@@ -1885,7 +1878,7 @@
             <img src="images/logos/logo-careersource.png" alt="CareerSource Florida" class="client-logo-img is-wm">
           </div>
 
-          <!-- duplicate set, makes the loop seamless -->
+          <!-- duplicate set that makes the loop seamless -->
           <div class="client-mark" aria-hidden="true">
             <span class="client-abbr">AHCA</span>
             <span class="client-full">Agency for Health Care Administration</span>
@@ -2041,7 +2034,7 @@
     <div class="svc-grid fu d1">
 
       <article class="svc-card">
-        <!-- Icon: network / agent nodes -->
+        <!-- Icon: network/agent nodes -->
         <svg class="svc-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
           <circle cx="20" cy="8"  r="4" stroke="#83AD36" stroke-width="1.5"/>
           <circle cx="8"  cy="32" r="4" stroke="#738063" stroke-width="1.5"/>
@@ -2075,7 +2068,7 @@
       </article>
 
       <article class="svc-card">
-        <!-- Icon: chart / reporting -->
+        <!-- Icon: chart/reporting -->
         <svg class="svc-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
           <rect x="6" y="28" width="6" height="8"  rx="1" fill="#83AD36" opacity="0.7"/>
           <rect x="17" y="18" width="6" height="18" rx="1" fill="#83AD36" opacity="0.85"/>
@@ -2090,7 +2083,7 @@
       </article>
 
       <article class="svc-card">
-        <!-- Icon: gear / strategy -->
+        <!-- Icon: gear/strategy -->
         <svg class="svc-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
           <circle cx="20" cy="20" r="5.5" stroke="#83AD36" stroke-width="1.5"/>
           <path d="M20 7v4M20 29v4M7 20h4M29 20h4M10.1 10.1l2.83 2.83M27.07 27.07l2.83 2.83M29.9 10.1l-2.83 2.83M12.93 27.07l-2.83 2.83" stroke="#738063" stroke-width="1.3" stroke-linecap="round"/>
@@ -2103,7 +2096,7 @@
       </article>
 
       <article class="svc-card">
-        <!-- Icon: checklist / change -->
+        <!-- Icon: checklist/change -->
         <svg class="svc-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
           <rect x="6" y="6" width="28" height="28" rx="3" stroke="#738063" stroke-width="1.5"/>
           <path d="M13 14l2.5 2.5 5-5"  stroke="#83AD36" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
